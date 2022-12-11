@@ -223,5 +223,177 @@ header .icons #menu-bars{
 
 }
 
-
 /* ========== HEADER END====  */
+
+/* ========== BUTTON FOOD VÀ DRINK====  */
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color:rgb(0, 0, 0);
+    background: #fcec9c;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:.8rem 3rem;
+    margin-left: 10px;
+}
+
+
+.btn:hover{
+    background: #FEA905;
+    letter-spacing: .1rem;
+    margin-left: 30px;
+}
+
+
+.btn-choose{
+    padding-top: 30px;
+}
+/* ==========END BUTTON FOOD VÀ DRINK====  */
+
+/* ========== HIGH PROTEIN====  */
+
+section .nen1{
+    margin-top: 10pt;
+    width: auto;
+    height: 350px;
+    border-radius: 5rem;
+    background-image: url(/imagemenu/nen1.jpeg);
+    background-size: cover;
+}
+section .dishes .group {
+    font-size: 40px;
+    text-align: center;;
+}
+section .dishes .des {
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.dishes .box-container{
+    display: grid;
+    grid-template-columns: 240px 240px 240px ;
+    gap: 80px;
+}
+.dishes .box-container .box{
+    padding:2rem;
+    margin-top: 15pt;
+    background:#fcec9c7d;
+    border-radius: 7%; 
+    border: 0.25rem solid rgba(255, 179, 0, 0.644);
+    text-align: center;
+}
+.dishes .box-container .box img{
+    display: block;  height: 140pt; width: 140pt;
+    border-radius: 10%;
+    margin-left: 5px;
+}
+.dishes .box-container .infor{
+    margin-top: 10pt;
+}
+
+section .dishes .box-container .box h3{
+    color:var(--black);
+    font-size: 16px;
+}
+
+section .dishes .box-container .box .stars{
+    padding:1rem 0;
+}
+
+.dishes .box-container .box .stars i{
+    font-size: 16px;
+    color: rgb(18, 147, 22);
+}
+section .dishes .box-container .box span{
+    font-size: 13px;
+}
+
+/* ========== END HIGH PROTEIN====  */
+
+/* ========== HEALTHY ====  */
+.nen2{
+    margin-top: 30pt;
+    width: auto;
+    height: 350px;
+    border-radius: 5rem;
+    background-image: url(/imagemenu/nen2.png);
+    background-size: cover;
+}
+section .dishes{
+    margin-top: 10pt;
+}
+/* ========== END HEALTHY ====  */
+
+/* ========== QUICK ====  */
+.nen3{
+    margin-top: 30pt;
+    width: auto;
+    height: 350px;
+    border-radius: 5rem;
+    background-image: url(/imagemenu/nen3.jpg);
+    background-size: cover;
+}
+/* ========== END QUICK ====  */
+
+/* ========== Hot Pot ====  */
+.nen4{
+    margin-top: 30pt;
+    width: auto;
+    height: 350px;
+    border-radius: 5rem;
+    background-image: url(/imagemenu/nen4.jpg);
+    background-size: cover;
+}
+/* ========== END ====  */
+
+/*=====DRINK====== */
+
+.nen5{
+    margin-top: 10pt;
+    width: auto;
+    height: 350px;
+    border-radius: 5rem;
+    background-image: url(/imagemenu/nen5.jpg);
+    background-size: cover;
+}
+.dishes .box-container-drink{
+    display: grid;
+    grid-template-columns: 240px 240px 240px ;
+    gap: 80px;
+}
+.dishes .box-container-drink .box{
+    padding:2rem;
+    margin-top: 25pt;
+    background:#fcec9c7d;
+    border-radius: 7%; 
+    border: 0.25rem solid rgba(255, 179, 0, 0.644);
+    text-align: center;
+}
+.dishes .box-container-drink .box img{
+    display: block;  height: 140pt; width: 140pt;
+    border-radius: 10%;
+    margin-left: 5px;
+}
+.dishes .box-container-drink .infor{
+    margin-top: 15pt;
+}
+
+section .dishes .box-container-drink .box h3{
+    color:var(--black);
+    font-size: 16px;
+}
+
+section .dishes .box-container-drink .box .stars{
+    padding:1rem 0;
+}
+
+.dishes .box-container-drink .box .stars i{
+    font-size: 16px;
+    color: rgb(18, 147, 22);
+}
+/*===== END DRINK====== */
+
+/*====== RESPONSIVE======*/
