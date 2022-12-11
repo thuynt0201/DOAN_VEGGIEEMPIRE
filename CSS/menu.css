@@ -254,7 +254,7 @@ header .icons #menu-bars{
 
 /* ========== HIGH PROTEIN====  */
 
-section .nen1{
+.nen1{
     margin-top: 10pt;
     width: auto;
     height: 350px;
@@ -262,23 +262,35 @@ section .nen1{
     background-image: url(/imagemenu/nen1.jpeg);
     background-size: cover;
 }
-section .dishes .group {
+.dishes .group {
     font-size: 40px;
-    text-align: center;;
+    text-align: center;
 }
-section .dishes .des {
+.dishes .des {
     font-size: 24px;
     font-weight: lighter;
     text-align: center;
 }
 
-.dishes .box-container{
+.box-container{
     display: grid;
-    grid-template-columns: 240px 240px 240px ;
+    grid-template-columns: repeat(3, 1fr);
     gap: 80px;
     align-items: center;
     justify-items: center;
 }
+
+@media (max-width: 992px) {
+    .box-container {
+        grid-template-columns: 1fr 1fr;
+    }   
+}
+@media (max-width: 560px) {
+    .box-container{
+        grid-template-columns: 1fr;
+    }   
+}
+
 .dishes .box-container .box{
     padding:2rem;
     margin-top: 15pt;
@@ -296,12 +308,12 @@ section .dishes .des {
     margin-top: 10pt;
 }
 
-section .dishes .box-container .box h3{
+.dishes .box-container .box h3{
     color:var(--black);
     font-size: 16px;
 }
 
-section .dishes .box-container .box .stars{
+.dishes .box-container .box .stars{
     padding:1rem 0;
 }
 
@@ -309,7 +321,7 @@ section .dishes .box-container .box .stars{
     font-size: 16px;
     color: rgb(18, 147, 22);
 }
-section .dishes .box-container .box span{
+.dishes .box-container .box span{
     font-size: 13px;
 }
 
@@ -324,7 +336,7 @@ section .dishes .box-container .box span{
     background-image: url(/imagemenu/nen2.png);
     background-size: cover;
 }
-section .dishes{
+.dishes{
     margin-top: 10pt;
 }
 /* ========== END HEALTHY ====  */
@@ -361,41 +373,7 @@ section .dishes{
     background-image: url(/imagemenu/nen5.jpg);
     background-size: cover;
 }
-.dishes .box-container-drink{
-    display: grid;
-    grid-template-columns: 240px 240px 240px ;
-    gap: 80px;
-}
-.dishes .box-container-drink .box{
-    padding:2rem;
-    margin-top: 25pt;
-    background:#fcec9c7d;
-    border-radius: 7%; 
-    border: 0.25rem solid rgba(255, 179, 0, 0.644);
-    text-align: center;
-}
-.dishes .box-container-drink .box img{
-    display: block;  height: 140pt; width: 140pt;
-    border-radius: 10%;
-    margin-left: 5px;
-}
-.dishes .box-container-drink .infor{
-    margin-top: 15pt;
-}
 
-section .dishes .box-container-drink .box h3{
-    color:var(--black);
-    font-size: 16px;
-}
-
-section .dishes .box-container-drink .box .stars{
-    padding:1rem 0;
-}
-
-.dishes .box-container-drink .box .stars i{
-    font-size: 16px;
-    color: rgb(18, 147, 22);
-}
 /*===== END DRINK====== */
 
 /*====== RESPONSIVE======*/
