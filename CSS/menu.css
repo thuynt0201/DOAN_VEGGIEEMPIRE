@@ -276,6 +276,7 @@ section .dishes .des {
     display: grid;
     grid-template-columns: 240px 240px 240px ;
     gap: 80px;
+    align-items: center;
 }
 .dishes .box-container .box{
     padding:2rem;
