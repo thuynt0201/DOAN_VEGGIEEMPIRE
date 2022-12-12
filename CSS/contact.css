@@ -111,35 +111,27 @@ header .icons #menu-bars{
     display: none ;
 }
 
-/* media queries  */
-
-@media (max-width:991px){
-
-    html{
-        font-size: 55%;
-    }
-    
-    header{
-        padding:1rem 2rem;
-    }
-
-    section{
-        padding:2rem;      
-        
-    }
 
 
-}
 #search-form{
     position: fixed;
-    top:-110%; left:0; 
-    height:100%; width:100%;
+    margin-top: 9rem;
+    top:110%; right: 0;     
     z-index: 1004;
-    background:rgba(88, 87, 74, 0.766);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding:0 1rem;
+    background:rgba(88, 87, 74, 0.766);   
+    padding:0 1rem;    
+  width: 50rem;
+  border-radius: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5.5rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
 }
 
 #search-form.active{
@@ -174,12 +166,24 @@ header .icons #menu-bars{
     color:var(--green);
 }
 
-#search-form #close{
-    position: absolute;
-    color:#fff;
-    cursor: pointer;
-    top: 2rem; right:3rem;
-    font-size: 5rem;
+/* media queries  */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+    
+    header{
+        padding:1rem 2rem;
+    }
+
+    section{
+        padding:2rem;      
+        
+    }
+
+
 }
 
 
@@ -223,3 +227,133 @@ header .icons #menu-bars{
 
 
 /* ========== HEADER END====  */
+
+
+
+.bgContact{
+    margin-top: 10pt;
+    width:auto;
+    height: 450px;
+    background-image: url(/ImageContact/bgContact1.jpg);
+    background-size: cover;
+}
+
+.h3 {
+    font-size: 36px;
+    text-align: center;;
+}
+.h1 {
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+/* Contact */
+.contact__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column-reverse;
+	gap: 5rem;
+}
+.contact__left__wrapper {
+	max-width: 350px;
+}
+
+@media only screen and (min-width: 768px) {
+	.contact__wrapper {
+		flex-direction: row;
+		gap: 0;
+	}
+	.contact__left {
+		flex: 3;
+	}
+	.contact__right {
+		flex: 2;     
+	}
+	
+    
+}
+@media only screen and (max-width: 900px) {
+	.contact__left,
+	.contact__right {
+		flex: 1;
+	}
+}
+
+.order form{
+    max-width:90rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border:.1rem solid rgba(0,0,0,.2);
+    background:#fff;
+    padding:1.5rem;
+    margin:0 auto;
+}
+
+
+.order form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.order form .inputBox .input{
+    width:49%;
+}
+
+.order form .inputBox .input span{
+    display:block;
+    padding:.5rem 0;
+    font-size: 1.5rem;
+    color:var(--light-color);
+}
+
+.order form .inputBox .input input,
+.order form .inputBox .input textarea{
+    background:#eee;
+    border-radius: .5rem;
+    padding:1rem;
+    font-size: 1.6rem;
+    color:var(--black);
+    text-transform: none;
+    margin-bottom: 1rem;
+    width:100%;
+}
+
+.order form .inputBox .input input:focus,
+.order form .inputBox .input textarea:focus{
+    border:.1rem solid var(--green);
+}
+
+.order form .inputBox .input textarea{
+    height:20rem;
+    resize: none;
+}
+
+.order form .btn{
+    margin-top: 0;
+}
+
+
+
+/* ========== CONTACT END ==========  */
+
+/* check */
+.bgcheck {
+    width:auto;
+    height: 550px;
+    background-image: url(/ImageContact/bgContact2.jpg);
+    background-size: cover;
+
+}
+
+.h2 {
+    padding: 30px;
+    font-size: 36px;
+    text-align: center;;
+}
+.p {
+    font-size: 18px;
+    text-align: center;
+}

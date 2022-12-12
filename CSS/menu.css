@@ -111,16 +111,27 @@ header .icons #menu-bars{
     display: none ;
 }
 
+
+
 #search-form{
     position: fixed;
-    top:-110%; left:0; 
-    height:100%; width:100%;
+    margin-top: 9rem;
+    top:110%; right: 0;     
     z-index: 1004;
-    background:rgba(88, 87, 74, 0.766);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding:0 1rem;
+    background:rgba(88, 87, 74, 0.766);   
+    padding:0 1rem;    
+  width: 50rem;
+  border-radius: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5.5rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
 }
 
 #search-form.active{
@@ -153,14 +164,6 @@ header .icons #menu-bars{
 
 #search-form label:hover{
     color:var(--green);
-}
-
-#search-form #close{
-    position: absolute;
-    color:#fff;
-    cursor: pointer;
-    top: 2rem; right:3rem;
-    font-size: 5rem;
 }
 
 /* media queries  */
@@ -220,5 +223,157 @@ header .icons #menu-bars{
 
 }
 
-
 /* ========== HEADER END====  */
+
+/* ========== BUTTON FOOD VÀ DRINK====  */
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color:rgb(0, 0, 0);
+    background: #fcec9c;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:.8rem 3rem;
+    margin-left: 10px;
+}
+
+
+.btn:hover{
+    background: #FEA905;
+    letter-spacing: .1rem;
+    margin-left: 30px;
+}
+
+
+.btn-choose{
+    padding-top: 30px;
+}
+/* ==========END BUTTON FOOD VÀ DRINK====  */
+
+/* ========== HIGH PROTEIN====  */
+
+.nen1{
+    margin-top: 10pt;
+    width: auto;
+    height: 350px;
+    border-radius: 5rem;
+    background-image: url(/imagemenu/nen1.jpeg);
+    background-size: cover;
+}
+.dishes .group {
+    font-size: 40px;
+    text-align: center;
+}
+.dishes .des {
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    align-items: center;
+    justify-items: center;
+}
+
+@media (max-width: 992px) {
+    .box-container {
+        grid-template-columns: 1fr 1fr;
+    }   
+}
+@media (max-width: 560px) {
+    .box-container{
+        grid-template-columns: 1fr;
+    }   
+}
+
+.dishes .box-container .box{
+    padding:2rem;
+    margin-top: 15pt;
+    background:#fcec9c7d;
+    border-radius: 7%; 
+    border: 0.25rem solid rgba(255, 179, 0, 0.644);
+    text-align: center;
+}
+.dishes .box-container .box img{
+    display: block;  height: 140pt; width: 140pt;
+    border-radius: 10%;
+    margin-left: 5px;
+}
+.dishes .box-container .infor{
+    margin-top: 10pt;
+}
+
+.dishes .box-container .box h3{
+    color:var(--black);
+    font-size: 16px;
+}
+
+.dishes .box-container .box .stars{
+    padding:1rem 0;
+}
+
+.dishes .box-container .box .stars i{
+    font-size: 16px;
+    color: rgb(18, 147, 22);
+}
+.dishes .box-container .box span{
+    font-size: 13px;
+}
+
+/* ========== END HIGH PROTEIN====  */
+
+/* ========== HEALTHY ====  */
+.nen2{
+    margin-top: 30pt;
+    width: auto;
+    height: 350px;
+    border-radius: 5rem;
+    background-image: url(/imagemenu/nen2.png);
+    background-size: cover;
+}
+.dishes{
+    margin-top: 10pt;
+}
+/* ========== END HEALTHY ====  */
+
+/* ========== QUICK ====  */
+.nen3{
+    margin-top: 30pt;
+    width: auto;
+    height: 350px;
+    border-radius: 5rem;
+    background-image: url(/imagemenu/nen3.jpg);
+    background-size: cover;
+}
+/* ========== END QUICK ====  */
+
+/* ========== Hot Pot ====  */
+.nen4{
+    margin-top: 30pt;
+    width: auto;
+    height: 350px;
+    border-radius: 5rem;
+    background-image: url(/imagemenu/nen4.jpg);
+    background-size: cover;
+}
+/* ========== END ====  */
+
+/*=====DRINK====== */
+
+.nen5{
+    margin-top: 10pt;
+    width: auto;
+    height: 350px;
+    border-radius: 5rem;
+    background-image: url(/imagemenu/nen5.jpg);
+    background-size: cover;
+}
+
+/*===== END DRINK====== */
+
+/*====== RESPONSIVE======*/
