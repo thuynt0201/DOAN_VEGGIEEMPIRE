@@ -224,3 +224,74 @@ header .icons #menu-bars{
 
 
 /* ========== HEADER END====  */
+
+/* ========== BUTTON POLICY ====  */
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color:rgb(0, 0, 0);
+    background: #fcec9c;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:.8rem 3rem;
+    margin-left: 10px;
+}
+
+
+.btn:hover{
+    background: #FEA905;
+    letter-spacing: .1rem;
+    margin-left: 30px;
+}
+
+
+.btn-choose{
+    padding-top: 30px;
+}
+
+.bgPolicy1{
+    margin-top: 10pt;
+    width:auto;
+    height: 450px;
+    background-image: url(/ImagePolicy/bgPolicy2.jpg);
+    background-size: cover;
+}
+
+
+
+/* ==========  HERO ==========  */
+
+.hero__wrapper {
+	padding: 40px;
+    text-align: center;
+    margin-top:0rem;
+    background-color:#fcec9c;
+}
+
+
+.hero__heading {
+	font-family:'Nunito', sans-serif;
+	font-weight: bold;
+	line-height: 1.4em;
+	text-align: justify;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	color: var(--black-1);
+}
+
+.hero__info_bold {
+    text-align: justify;
+    font-weight: bold;
+	font-size: 1.8rem;
+	margin-bottom: 0.5rem;
+	color: var(--black-2);
+}
+.hero__info {
+	text-align: justify;
+	font-size: 1.8rem;
+	margin-bottom: 0.5rem;
+	color: var(--black-2);
+}
+/* ==========END BUTTON FOOD VÀ DRINK====  */
