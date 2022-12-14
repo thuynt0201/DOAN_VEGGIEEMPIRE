@@ -6,7 +6,7 @@
     --light-color:#666;
     --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
 }
-
+ 
 *{
     font-family: 'Nunito', sans-serif;
     margin:0; padding:0;
@@ -15,20 +15,20 @@
     outline: none; border:none;    
     transition: all .2s linear;
 }
-
+ 
 html{
     font-size: 62.5%;
     overflow-x: hidden;
-    scroll-padding-top: 5.5rem;
-    scroll-behavior: smooth;
+    scroll-padding-top: 15rem;
+    scroll-behavior:smooth;
 }
-
+ 
 section{
     padding:2rem 9%;
     margin-top: 5rem;
    
 }
-
+ 
 section:nth-child(even){
     background:#eee;
 }
@@ -39,7 +39,7 @@ section:nth-child(even){
     padding-bottom: 2rem;
     text-transform: uppercase;
 }
-
+ 
 .btn{
     margin-top: 1rem;
     display: inline-block;
@@ -51,14 +51,14 @@ section:nth-child(even){
     padding:.8rem 3rem;
     margin-left: 30px;
 }
-
+ 
 .btn:hover{
     background: var(--green);
     letter-spacing: .1rem;
     margin-left: 30px;
 }
-
-
+ 
+ 
 /* ========== THANH TIÊU ĐỀ ==========  */
 header{
     position: fixed;
@@ -71,21 +71,21 @@ header{
     z-index: 1000;
     box-shadow: var(--box-shadow);
 }
-
+ 
 header .navbar a{
     font-size: 24px;
     border-radius: .5rem;
     padding:.2rem 1.5rem;
     color:var(--light-color);
 }
-
+ 
 header .navbar a.active,
 header .navbar a:hover{
     color:#fff;
     background: var(--green);
     font-weight: bold;
 }
-
+ 
 header .icons i,
 header .icons a{
     cursor: pointer;
@@ -99,20 +99,20 @@ header .icons a{
     border-radius: 50%;
     background:#FFD705 ;
 }
-
+ 
 header .icons i:hover,
 header .icons a:hover{
     color:#fff;
     background: var(--green);
     transform: rotate(360deg);
 }
-
+ 
 header .icons #menu-bars{
     display: none ;
 }
-
-
-
+ 
+ 
+ 
 #search-form{
     position: fixed;
     margin-top: 9rem;
@@ -223,157 +223,460 @@ header .icons #menu-bars{
 
 }
 
+
 /* ========== HEADER END====  */
-
-/* ========== BUTTON FOOD VÀ DRINK====  */
-.btn{
-    margin-top: 1rem;
-    display: inline-block;
-    font-size: 1.7rem;
-    font-weight: 700;
-    color:rgb(0, 0, 0);
-    background: #fcec9c;
-    border-radius: .5rem;
-    cursor: pointer;
-    padding:.8rem 3rem;
-    margin-left: 10px;
-}
-
-
-.btn:hover{
-    background: #FEA905;
-    letter-spacing: .1rem;
-    margin-left: 30px;
-}
-
-
-.btn-choose{
-    padding-top: 30px;
-}
-/* ==========END BUTTON FOOD VÀ DRINK====  */
-
-/* ========== HIGH PROTEIN====  */
-
-.nen1{
-    margin-top: 10pt;
-    width: auto;
-    height: 350px;
-    border-radius: 5rem;
-    background-image: url(/imagemenu/nen1.jpeg);
-    background-size: cover;
-}
-.dishes .group {
-    font-size: 40px;
-    text-align: center;
-}
-.dishes .des {
-    font-size: 24px;
-    font-weight: lighter;
-    text-align: center;
-}
-
-.box-container{
+ 
+/* ========== HEADER END====  */
+ 
+.containe{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 80px;
+    grid-template-columns:  1fr 280px;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+ 
+ 
+.title{
+    padding: 0 30px;
+}
+ 
+.title p{
+    font-size: 40px;
+    color: #18B515;
+    margin: 0;
+}
+
+
+h2{
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+}
+ 
+#food-items{
+    background: white;
+    overflow: auto;
+    height: calc(100vh - 90px);
+    margin-top: 15px;
+}
+#food-containe{
     align-items: center;
-    justify-items: center;
+    padding-top: 65px;
+    position: sticky;
+    background: rgb(255, 255, 255);
 }
-
-@media (max-width: 992px) {
-    .box-container {
-        grid-template-columns: 1fr 1fr;
-    }   
+::-webkit-scrollbar{
+    display: none;
 }
-@media (max-width: 560px) {
-    .box-container{
-        grid-template-columns: 1fr;
-    }   
+ 
+ 
+ 
+.add-box i{
+    font-size: 20px;
 }
-
-.dishes .box-container .box{
-    padding:2rem;
-    margin-top: 15pt;
-    background:#fcec9c7d;
-    border-radius: 7%; 
-    border: 0.25rem solid rgba(255, 179, 0, 0.644);
+ 
+.food-items{
+    display: none;
+}
+.cart-toggle{
+    display: block;
+}
+.util i,.user i{
+    font-size: 18px;
+    margin: 0 16px;
+    border: 2px solid #18B515;
+    padding: 8px 16px;
+    color: #18B515;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#High-Protein,#Super-Quick,#healthy,#hotpot,#drinks{
+    margin-top: 60px;  
+}
+ 
+ 
+#category-name,.item-menu{
+    font-size: 35px;  
+    color: #FEA905;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 35px;
+    margin-top: -65px;
+}
+#item-card{
+    width: 220px;
+    height: 300px;
+    padding: 15px;
+    margin: 30px;
+    margin-left: 70px;
+    display: inline-block;
+    background: #fcec9c7d;
+    border-radius: 7%;
+    border: 0.2rem solid rgba(255, 179, 0, 0.644);
+    cursor: pointer;
+    transition: 0.5s all step-end;
     text-align: center;
 }
-.dishes .box-container .box img{
-    display: block;  height: 140pt; width: 140pt;
-    border-radius: 10%;
-    margin-left: 5px;
+#item-card:hover img{
+    transform: scale(1.2);
 }
-.dishes .box-container .infor{
-    margin-top: 10pt;
+#card-top{
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
 }
-
-.dishes .box-container .box h3{
-    color:var(--black);
+#rating{
+    padding: 7px;
+    color: #FEA905;
+    background: rgba(0, 0, 0, 0.614);
+    font-size: 12px;
+    border-radius: 10px;
+}
+.fa-plus{
+    padding: 10px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+.toggle-heart{
+background: #18B515;
+color: white;
+}
+#item-card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+    margin-bottom: 15px;
+    transition: 0.5s all ease-in-out;
+}
+#item-name{
+    margin: 5px 0;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    font-weight: bolder;
+}
+#item-price{
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 15px;
+}
+ 
+.food-items{
+    display: none;
+}
+.cart-toggle{
+    display: none;
+}
+#cart-page{
+    background: white;
+    margin: 40px 10px;
+    margin-right: 50px;
+    padding: 20px 30px;
+    padding-bottom: 30px;
+    position: relative;
+}
+#cart-title{
+    font-size: 35px;
+    margin: 0;
+    color: #18B515;
+    font-weight: bolder;
+    text-align: center;
+}
+#cart-page table{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+#cart-page table thead td{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+ 
+.cart-btn{
+    outline: none;
+    border: none;
+    background: #18B515;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    bottom: 30px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+#cart-page table tbody td{
+    padding: 10px 0;
+    font-size: 20px;
+}
+#cart-page table tbody button{
+    outline: none;
+    border: none;
     font-size: 16px;
+    background: none;
+    background: #18B515;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 5px;
+    width: 25px;
+    height: 25px;
+}
+#cart-page table tbody img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+#checkout{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 5px;
+    background: white;
+    padding: 10px 20px;
+}
+#checkout p{
+    margin: 15px 0;
+    float: left;
+}
+#total-price,#total-item{
+    font-size: 25px;
+    color: black;
+    font-weight: bolder;
+}
+#delievery{
+    font-size: 20px;
+    color: limegreen;
+    font-weight: bolder;
+ 
+}
+#cart{
+    padding-right: 30px;
+    overflow-y: scroll;
+}
+ 
+.item-menu{
+    margin: 0px;
+    font-size: 25px;
+    margin-top: 60px;
+    padding-top: 75px;
+    color: #FEA905;
+    font-weight: bolder;
+}
+ 
+ 
+ 
+ 
+.list-card{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    background-color: #fff8d489;
+}
+.list-card:hover{
+    background: #FFD705;
+}
+.list-card:hover img{
+    transition: 0.5s all ease-in-out;
+    transform: scale(1.2);
+}
+.list-card img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+.list-name{
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(94, 43, 43);
+    font-weight: 350px;
+}
+ 
+#mobile-view{
+    display: none;
+}
+ 
+#m-total-amount{
+    display: none;
+}
+@media screen and (max-width : 800px) and (-webkit-min-device-pixel-ratio: 2){
+    .containe{
+        display: none;
+    }
+    
+    #mobile-view{
+        display: grid;
+        grid-template-rows: 100px 1fr;
+        height: 100%;
+        overflow: hidden;
+        
+        width: 100vw;
+    }
+    .mobile-top{
+        
+        background: white;
+        z-index: 1;
+    }
+    .item-container{
+        overflow-y: scroll;
+    }
+
+    .category-header{
+        display: flex;
+        width: 100vw;
+        overflow-x: scroll;
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 1;
+       
+        margin: 0;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+    .toggle-category{
+        display: none;
+        position: relative;
+    }
+    .list-card{
+        margin: 0 10px;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+    }
+    .list-card img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    .list-card:hover{
+        background: none;
+    }
+    .list-card:hover img{
+        transform: none;
+        transition: none;
+    }
+    .list-name{
+        margin: 5px 0;
+        color: rgb(94, 43, 43);
+        width: max-content;
+        font-size: 16px;
+    }
+    #food-items{        
+        padding: 5px 10px;
+    }
+
+    
+    #category-name{
+        font-size: 25px;
+    }
+    #item-card{
+        width: 180px;
+        height: 220px;
+        margin: 15px;
+        margin-left: 40px;
+    }
+    #item-card, #card-top{
+      padding-top: 4px;
+    }
+
+    #card-top, #rating{
+        font-size: 12px;
+    }
+    #item-card img{
+        width: 100px;
+        height: 100px;
+    }
+    #item-name,#item-price{
+        font-size: 14px;
+    }
+    .list-card{
+        flex-direction: column;
+    }
+    #cart-page{
+        margin: 3px 0;
+        padding: 10px 5px;
+        padding-bottom: 30px;
+        border-top: 1px solid rgb(219, 219, 219);
+    }
+    #cart-page table thead td{
+        font-size: 20px;
+    }
+    #cart-page table tbody td{
+        font-size: 18px;
+    }
+    #cart-page table tbody img{
+        width: 60px;
+        height: 60px;
+    }
+    #cart-title{
+        font-size: 25px;
+        display: inline-block;
+    }
+    #m-total-amount{
+        display: inline-block;
+        color: lightcoral;
+        padding: 5px 10px;
+        margin: 0;
+        border:  1px solid lightcoral;
+        float: right;
+    }
+    .cart-btn{
+        font-size: 14px;
+        background: lightcoral;
+        padding: 8px 15px;
+        margin: auto;
+    }
+    .btn-box{
+        text-align: center;
+    }
+    
 }
 
-.dishes .box-container .box .stars{
-    padding:1rem 0;
+@media screen and (max-width : 400px) and (-webkit-min-device-pixel-ratio: 2){
+    #mobile-view{
+        min-height: -webkit-fill-available;
+    }
+    #item-card{
+        width: 140px;
+        height: 180px;
+        margin: 15px;
+        margin-left: 30px;
+    }
+    #item-card, #card-top{
+      padding-top: 4px;
+    }
+
+    #card-top, #rating{
+        font-size: 8px;
+    }
+    #item-card img{
+        width: 70px;
+        height: 70px;
+    }
+    #item-name,#item-price{
+        font-size: 10px;
+    }
+
+    #food-items{
+        padding: 0;
+    }
 }
 
-.dishes .box-container .box .stars i{
-    font-size: 16px;
-    color: rgb(18, 147, 22);
-}
-.dishes .box-container .box span{
-    font-size: 13px;
-}
-
-/* ========== END HIGH PROTEIN====  */
-
-/* ========== HEALTHY ====  */
-.nen2{
-    margin-top: 30pt;
-    width: auto;
-    height: 350px;
-    border-radius: 5rem;
-    background-image: url(/imagemenu/nen2.png);
-    background-size: cover;
-}
-.dishes{
-    margin-top: 10pt;
-}
-/* ========== END HEALTHY ====  */
-
-/* ========== QUICK ====  */
-.nen3{
-    margin-top: 30pt;
-    width: auto;
-    height: 350px;
-    border-radius: 5rem;
-    background-image: url(/imagemenu/nen3.jpg);
-    background-size: cover;
-}
-/* ========== END QUICK ====  */
-
-/* ========== Hot Pot ====  */
-.nen4{
-    margin-top: 30pt;
-    width: auto;
-    height: 350px;
-    border-radius: 5rem;
-    background-image: url(/imagemenu/nen4.jpg);
-    background-size: cover;
-}
-/* ========== END ====  */
-
-/*=====DRINK====== */
-
-.nen5{
-    margin-top: 10pt;
-    width: auto;
-    height: 350px;
-    border-radius: 5rem;
-    background-image: url(/imagemenu/nen5.jpg);
-    background-size: cover;
-}
-
-/*===== END DRINK====== */
-
+ 
 /*====== RESPONSIVE======*/
+ 
+ 
+

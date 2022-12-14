@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
     <title>Đồ án - Veggie Empire</title>
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
 
     
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!--font awesome cdn link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://www.w3schools.com/lib/w3.js"></script>
      <!--custom css file link-->
      <link rel="stylesheet" href="/CSS/menu.css">
@@ -37,367 +36,144 @@
             <div class="icons">
                 <i class="fas fa-bars" id="menu-bars"></i>
                 <i class="fas fa-search" id="search-icon"></i>
-                <a href="/HTML/cart.html" class="fas fa-shopping-cart"></a>
+                <i class="fa fa-cart-plus" id="cart-plus"> 0 </i>
                 <a href="/HTML/login.html" class="fas fa-user"></a>            
             </div>    
         </header>
        <!--Thanh tiêu đề END-->
-       <!-- search form  -->
-       <form action="" id="search-form">
+      <!-- search form  -->
+
+      <form action="" id="search-form">
         <input type="search" placeholder="Tìm món ăn" name="" id="search-box">
         <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
     </form>
 
 <!-- MENU -->
-<section id="food-and-drink">
+<!-- desktop view -->
+
+
+<div class="containe" id="containe">
+    <div id="food-containe">
+        <div id="header">
+        </div>
+        <div id="food-items" class="d-food-items">
+                <div id="High-Protein" class="d-High-Protein">
+                    <p id="category-name">High-Protein Vegetarian Meals</p>  
+                    <h2>Trọn vị đậm đà, tà tà ăn ngon...</h2>  
+                </div>
+
+                
+                <div id="healthy" class="d-healthy">
+                    <p id="category-name">Healthy Vegetarian Meals</p>    
+                    <h2>Món ăn thanh, gắp đũa nhanh</h2>
+                </div>
+
+                
+                <div id="Super-Quick" class="d-Super-Quick">
+                    <p id="category-name">Super Quick Vegetarian Meals</p>
+                    <h2>Không phải chờ, vậy gọi cái này đi</h2>
+                </div>
+
+                <div id="hotpot" class="d-hotpot">
+                    <p id="category-name">Vegetarian Hot Pot</p> 
+                    <h2>Canh thanh, lẩu nóng, bụng vui, ấm lòng</h2>
+                </div>
+
+  
+                <div id="drinks" class="d-drinks">
+                    <p id="category-name">Drinks</p> 
+                </div>
+        </div>
+
+        <div id="cart-page" class="cart-toggle">
+            <p id="cart-title">Cart Items</p>
+            <p id="m-total-amount">Total Amout : 100</p>
+            <table>
+                <thead>
+                    <td>Item</td>
+                    <td>Name</td>
+                    <td>Quantity</td>
+                    <td>Price</td>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+            <div class="border"> </div>
+            <div id="checkout" class="cart-toggle">
+                <div>
+                    <p id="total-item">Total Item : 0</p>
+                </div>
+                <div>
+                    <p id="total-price"> Total Price : 0 </p>
+                </div>
+                <div>
+                    <p id="delievery">Free delievery on 22000 ₫</p>
+                </div>
+            </div>
+            <div class="btn-box">
+                <button class="cart-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart">
     <center>
-        <div class="btn-choose">
-            <a href="menu.html" class="btn">FOOD</a><a href="menu2.html" class="btn">DRINK</a>
+        <div id="category-list">
+            <p class="item-menu">Go For Hunt</p>               
         </div>
     </center>
-</section>
+    </div>
+</div>
 
-    <!-- High Protein -->
-    <div class="nen1"></div>
-    <section class="dishes" id="dishes">
-        <h1 class="group"> Hight-Protein Vegetarian Meals </h1>
-        <h2 class="des"> Trọn vị đậm đà, tà tà ăn ngon... </h2>
-        <div class="box-container">
-            <div class="box">
-                <img src="/imagemenu/dau hu la lot.jpg" />
-                <div class="infor">
-                    <h3>Đậu phụ lá lốt cuộn</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span>59.000 ₫</span>
-                </div>
-            </div>
 
-            <div class="box">
-                <img src="/imagemenu/đậu phụ rau diếp cuôn (1).png" />
-                <div class="infor">
-                    <h3>Đậu phụ rau diếp cuộn</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span>79.000 ₫</span>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="/imagemenu/súp đậu lăng với nấm.png" />
-                <div class="infor">
-                    <h3>Súp đậu lăng với nấm</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span>89.000 ₫</span>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="/imagemenu/cà ri súp lơ (1).png" />
-                <div class="infor">
-                    <h3>Cà ri súp lơ</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span>89.000 ₫</span>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="/imagemenu/cà chua.jpg" />
-                <div class="infor">
-                    <h3>Cà chua nhồi thịt chay</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span>89.000 ₫</span>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="/imagemenu/ớt nhồi thịt chay (1).png" />
-                <div class="infor">
-                    <h3>Ớt chuông nhồi cơm chiên</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span>109.000 ₫</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-  <!-- End High Protein -->
-
-  <!-- Healthy -->
-  <div class="nen2"></div>
-  <section class="dishes" id="dishes">
-    <h1 class="group"> Healthy Vegetarian Meals </h1>
-    <h2 class="des"> Món ăn thanh, gắp đũa nhanh </h2>
-    <div class="box-container">
-
-        <div class="box">
-            <img src="/imagemenu/Bánh mì rau củ.jpg" />
-            <div class="infor">
-                <h3>Bánh mì rau củ</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>59.000 ₫</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="/imagemenu/súp bí ngô (1).png" />
-            <div class="infor">
-                <h3>Súp bí ngô</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>69.000 ₫</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="/imagemenu/gỏi rau củ.jpeg" />
-            <div class="infor">
-                <h3>Gỏi rau củ</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>79.000 ₫</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="/imagemenu/salad khoai lang nướng (1).png" />
-            <div class="infor">
-                <h3>Salad khoai lang nướng</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>89.000 ₫</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="/imagemenu/salad khoai tay.jpg" />
-            <div class="infor">
-                <h3>Salad khoai tây</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>89.000 ₫</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="/imagemenu/soup rau thập cẩm (1).png" />
-            <div class="infor">
-                <h3>Soup rau thập cẩm</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span>109.000 ₫</span>
-            </div>
+<!-- mobile view -->
+<div id="mobile-view" class="mobile-view">
+    <div class="mobile-top">
+        <div class="top-menu">
+        
+            <i class="fa fa-cart-plus" id="m-cart-plus"> 0</i>
         </div>
     </div>
-</section>
-<!-- End Healthy -->
+    
+    <div class="item-container">
+        <div class="category-header" id="category-header">   </div>
 
-
-<!-- Quick -->
-<div class="nen3"></div>
-<section class="dishes" id="dishes">
-  <h1 class="group"> Super Quick Vegetarian Meals </h1>
-  <h2 class="des"> Không phải chờ, vậy gọi này món này đi... </h2>
-  <div class="box-container">
-
-     <div class="box">
-        <img src="/imagemenu/kebab rau củ.jpg" />
-        <div class="infor">
-            <h3>Bánh Kebab rau củ</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
+        <div id="food-items" class="food-items">
+            <div id="High-Protein" class="m-High-Protein">
+                <p id="category-name">High-Protein Vegetarian Meals</p>    
             </div>
-            <span>59.000 ₫</span>
-        </div>
-      </div>
-
-    <div class="box">
-        <img src="/imagemenu/phô mai nướng (1).png" />
-        <div class="infor">
-            <h3>Phô mai nướng</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
+            <div id="healthy" class="m-healthy">
+                <p id="category-name">Healthy Vegetarian Meals</p>    
             </div>
-            <span>89.000 ₫</span>
-        </div>
+            <div id="Super-Quick" class="m-Super-Quick">
+                <p id="category-name">Super Quick Vegetarian Meals</p>
+            </div>
+            <div id="hotpot" class="m-hotpot">
+                <p id="category-name">Vegetarian Hot Pot</p> 
+            </div>
+            <div id="drinks" class="m-drinks">
+                <p id="category-name">Drinks</p> 
+            </div>
+
+        </div>            
     </div>
 
-      <div class="box">
-          <img src="/imagemenu/mì ramen tỏi mè (1).png" />
-          <div class="infor">
-            <h3>Mì ramen tỏi mè</h3>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
-            </div>
-           <span>89.000 ₫</span>
-          </div>
-      </div>
-    
-      <div class="box">
-          <img src="/imagemenu/pizza chay.jpg" />
-          <div class="infor">
-            <h3>Pizza chay</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>99.000 ₫</span>
-          </div>
-      </div>
-
-  </div>
-</section>
-<!-- End Quick -->
-
-<!-- Hot Pot -->
-<div class="nen4"></div>
-<section class="dishes" id="dishes">
-  <h1 class="group"> Vegetarian Hot pot </h1>
-  <h2 class="des"> Canh thanh, lẩu nóng, bụng vui, ấm lòng </h2>
-  <div class="box-container">
-      <div class="box">
-          <img src="/imagemenu/lẫu shabu shabu.jpg" />
-          <div class="infor">
-            <h3>Lẩu chay Shabu Shabu</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>209.000 ₫</span>
-          </div>
-      </div>
-
-      <div class="box">
-          <img src="/imagemenu/lẫu thái.jpg" />
-          <div class="infor">
-          <h3>Lẩu thái chay</h3>
-          <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-          </div>
-          <span>209.000 ₫</span>
-        </div>
-      </div>
-
-      <div class="box">
-          <img src="/imagemenu/lẫu truyền thống.jpg" />
-          <div class="infor">
-            <h3>Lẩu chay truyền thống</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>209.000 ₫</span>
-          </div>
-      </div>
-  </div>
-</section>
-<!-- End Hot Pot -->
   
-  <!--FOOTER-->
-  <p class="" w3-include-html="footer.html"></p> 
+</div>
+   <!--FOOTER-->
+   <p class="" w3-include-html="footer.html"></p> 
     
-  <script>      
-  w3.includeHTML();       
-  </script>
-  
-
+   <script>
+       w3.includeHTML();         
+   </script>
+   
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <!-- custom js file link  -->
-<script src="/JavaScript/menu.js"></script>
+<script src="/JavaScript/menu.js" type="module"></script>
 
 </body>
 </html>
