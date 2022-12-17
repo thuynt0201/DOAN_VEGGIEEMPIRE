@@ -355,7 +355,8 @@ textarea{
         <div class="right">
             <p class="title">GIAO HÀNG TẬN NƠI</p>
             <p class="titlesub">Nếu bạn mua mang về thì chọn Mua mang về để tiếp tục đặt hàng</p>
-            <input type="text" class="field" placeholder="Nhập địa chỉ của bạn">                  
+            <input type="text" class="field" placeholder="Nhập địa chỉ của bạn">  
+            <p id="field"> </p>                
             <button class="btn">Tiếp tục đặt hàng</button>
             <button class="btn">Mua mang về</button>
         </div>
@@ -385,7 +386,7 @@ textarea{
   document.querySelector('#close').onclick = () =>{
     document.querySelector('#search-form').classList.remove('active');
   }
-
+  document.getElementById('field').innerText='Thành phố Thủ Đức';
 </script>
 
 </body>
