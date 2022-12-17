@@ -531,10 +531,22 @@ button.show-modal:hover{
                         <input type="radio" name="radio" id="radio1">                      
                         <label for="radio1">Thanh toán bằng tiền mặt</label>
                     </div>
-                    <div class="radio-item">
+                    <div class="radio-item" id="paymentmomo">
                         <input type="radio" name="radio" id="radio2">
-                        <label for="radio2">Thanh toán bằng Mômo</label>
-                    </div>                    
+                        <label for="radio2">Thanh toán bằng Momo</label>
+                    </div>  
+                    <section class="modalpayment">                                                    
+                     <!-- POPUP thanh toán momo-->                   
+                     <div class="modal-box">
+                        <img src="../Image/QRCODEMOMO.jfif">
+                        <h2>Quét mã QR</h2>
+                        <h3>Bạn hãy quét mã QR Code trên ứng dụng Mono để thực hiện thanh toán</h3>
+                        <div class="buttons">
+                          <a href="../HTML/startOrder.html"> <button class="close-btn">Hủy</button></a>
+                          <button onclick="myFunction()">Xác nhận</button>                           
+                        </div>
+                      </div>        
+                      </section>   
                 </div>
     </form>  
     </div> 
