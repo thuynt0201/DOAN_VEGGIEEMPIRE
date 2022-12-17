@@ -72,6 +72,7 @@ section:nth-child(even){
     cursor: pointer;
     padding:.8rem 3rem;
     margin-left: 30px;
+    width: 250px;
 }
 
 .btn:hover{
@@ -225,6 +226,10 @@ header .icons a:hover{
     }  
 
 }
+
+/*----Address-----*/
+
+
 .containeraddress{
 	position: relative;
 	width: 100%;
@@ -247,7 +252,7 @@ header .icons a:hover{
 	text-align: center;
 	background-color: #fff;
 	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
-    height: 300px;
+    height: 500px;
 }
 
 .left{
@@ -281,8 +286,8 @@ header .icons a:hover{
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    height: 4px;
-    width: 150px;
+    height: 2px;
+    width: 200px;
     border-radius: 2px;
     background-color: #2ecc71;
 }
@@ -293,9 +298,10 @@ header .icons a:hover{
 	outline: none;
 	background-color: rgba(230, 230, 230, 0.6);
 	padding: 0.5rem 1rem;
-	font-size:28px;
+	font-size:22px;
 	margin-bottom: 22px;
 	transition: .3s;
+    border-radius: 0.5rem;
 }
 
 .field:hover{
@@ -309,8 +315,9 @@ textarea{
 
 
 .field:focus{
-    border: 2px solid rgba(30,85,250,0.47);
+    border: 2px solid #2ecc71;
     background-color: #fff;
+    border-radius: 0.5rem;
 }
 
 @media screen and (max-width: 880px){
@@ -320,6 +327,7 @@ textarea{
 	.left{
 		height: 200px;
 	}
+    
 }
 
      </style>
@@ -355,14 +363,12 @@ textarea{
         <div class="right">
             <p class="title">GIAO HÀNG TẬN NƠI</p>
             <p class="titlesub">Nếu bạn mua mang về thì chọn Mua mang về để tiếp tục đặt hàng</p>
-            <input type="text" class="field" placeholder="Nhập địa chỉ của bạn">  
-            <p id="field"> </p>                
-            <button class="btn">Tiếp tục đặt hàng</button>
+            <input type="text" class="field" placeholder="Nhập địa chỉ của bạn">                  
+            <a href="../HTML/startOrder.html" class="btn">Tiếp tục đặt hàng</a>
             <button class="btn">Mua mang về</button>
         </div>
     </div>
 </div>
-
 
   <!--FOOTER-->
   <p class="" w3-include-html="footer.html"></p> 

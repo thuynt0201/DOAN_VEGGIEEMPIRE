@@ -120,17 +120,17 @@ header .icons #menu-bars{
     z-index: 1004;
     background:rgba(88, 87, 74, 0.766);   
     padding:0 1rem;    
-  width: 50rem;
-  border-radius: .5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 5.5rem;
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    width: 50rem;
+    border-radius: .5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 5.5rem;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 
 }
 
@@ -165,6 +165,74 @@ header .icons #menu-bars{
 #search-form label:hover{
     color:var(--green);
 }
+
+#login-form {
+    position: fixed;
+    margin-top: 9rem;
+    top:110%; right: 0;    
+    z-index: 1004;
+    background: #fff;
+    padding:0 1rem;    
+    width: 30rem;
+    border-radius: .8rem;  
+    height: 34rem;
+    border: 0.2rem solid rgba(255, 179, 0, 0.644);
+ 
+  }
+ 
+#login-form.active {
+    top: 0;
+    right: 2rem;
+    -webkit-transition: .4s linear;
+    transition: .4s linear;
+  }
+  .dropdown-item
+  {
+      font-weight: 400;
+ 
+      display: block;
+      clear: both;
+ 
+      width: 100%;
+      padding: .5rem 1rem;
+ 
+      text-align: inherit;
+      white-space: nowrap;
+ 
+      color: #212529;
+      border: 0;
+      background-color: transparent;
+  }
+  .dropdown-item:hover,
+  .dropdown-item:focus
+  {
+      text-decoration: none;
+ 
+      color: #16181b;
+      background-color: #f6f9fc;
+  }
+  .dropdown-item.active,
+  .dropdown-item:active
+  {
+      text-decoration: none;
+ 
+      color: #16181b;
+      background-color: transparent;
+  }
+  .dropdown-item.disabled,
+  .dropdown-item:disabled
+  {
+      pointer-events: none;
+ 
+      color: #8898aa;
+      background-color: transparent;
+  }
+  .dropdown-menu .dropdown-item
+  {
+      font-size: 20px;
+ 
+      padding: 2rem 1.5rem;
+  }
 
 /* media queries  */
 
@@ -213,8 +281,6 @@ header .icons #menu-bars{
         font-size: 2rem;
         background:#eee;
     }
-
-    
 
     #search-form #search-box{
         width:90%;
@@ -271,7 +337,29 @@ h2{
     display: none;
 }
  
- 
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color:rgb(255, 255, 255);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:.8rem 3rem;
+    margin-left: 10px;
+}
+
+
+.btn:hover{
+    background: #18B515;
+    letter-spacing: .1rem;
+    margin-left: 30px;
+}
+
+
+.btn-choose{
+    padding-top: 30px;
+}
  
 .add-box i{
     font-size: 20px;
@@ -297,8 +385,8 @@ h2{
 }
  
  
-#category-name,.item-menu{
-    font-size: 35px;  
+#category-name{
+    font-size: 40px;  
     color: #FEA905;
     font-weight: bolder;
     text-align: center;
@@ -533,7 +621,6 @@ color: white;
     .item-container{
         overflow-y: scroll;
     }
-
     .category-header{
         display: flex;
         width: 100vw;
@@ -556,6 +643,9 @@ color: white;
         text-align: center;
         background-color: rgb(255, 255, 255);
     }
+
+
+
     .list-card img{
         width: 60px;
         height: 60px;
@@ -627,21 +717,23 @@ color: white;
     }
     #m-total-amount{
         display: inline-block;
-        color: lightcoral;
+        color: #27ae60;
         padding: 5px 10px;
         margin: 0;
-        border:  1px solid lightcoral;
+        border:  1px solid #27ae60;
         float: right;
     }
     .cart-btn{
         font-size: 14px;
-        background: lightcoral;
+        background: #27ae60;
         padding: 8px 15px;
         margin: auto;
     }
     .btn-box{
         text-align: center;
     }
+    
+
     
 }
 
@@ -655,19 +747,23 @@ color: white;
         margin: 15px;
         margin-left: 30px;
     }
-    #item-card, #card-top{
+    #item-card,#card-top{
       padding-top: 4px;
+    }
+    #item-name{
+        font-size: 10px;
+    }
+    #item-price{
+        font-size: 10px;
     }
 
     #card-top, #rating{
         font-size: 8px;
     }
+
     #item-card img{
         width: 70px;
         height: 70px;
-    }
-    #item-name,#item-price{
-        font-size: 10px;
     }
 
     #food-items{
@@ -675,8 +771,6 @@ color: white;
     }
 }
 
- 
-/*====== RESPONSIVE======*/
  
  
 
