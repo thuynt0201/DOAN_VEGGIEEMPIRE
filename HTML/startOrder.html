@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đồ án - Veggie Empire</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+     <!--custom css file link-->
+     <style>
+        /* ========== THANH TIÊU ĐỀ ==========  */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;    
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+section {
+  padding: 3rem 9%;
+}
+
+
+.heading{
+    text-align: center;
+    color:var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size:20px;
+    color:#fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:.8rem 3rem;
+    margin-left: 30px;
+}
+
+.btn:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+    margin-left: 30px;
+}
+
+
+/* ========== THANH TIÊU ĐỀ ==========  */
+header{
+    position: fixed;
+    top:0; left: 0; right:0;
+    background: #FFD705;
+    padding:1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height:4.5rem;
+    line-height: 4.5rem;
+    width:4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color:var(--black);
+    border-radius: 50%;
+    background:#FFD705 ;
+}
+
+header .icons i:hover,
+header .icons a:hover{
+    color:#fff;
+    background: var(--green);
+    transform: rotate(360deg);
+}
+
+
+
+#search-form{
+    position: fixed;
+    margin-top: 9rem;
+    top:110%; right: 0;     
+    z-index: 1004;
+    background:rgba(88, 87, 74, 0.766);   
+    padding:0 1rem;    
+  width: 50rem;
+  border-radius: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5.5rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+}
+
+#search-form.active{
+    top:0;
+}
+
+#search-form #search-box{
+    width:50rem;
+    border-bottom: .1rem solid #fff;
+    padding:1rem 0;
+    color:#fff;
+    font-size: 3rem;
+    text-transform: none;
+    background:none;
+}
+
+#search-form #search-box::placeholder{
+    color:#eee;
+}
+
+#search-form #search-box::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+
+#search-form label{
+    color:#fff;
+    cursor:pointer;
+    font-size: 3rem;
+}
+
+#search-form label:hover{
+    color:var(--green);
+}
+/* media queries  */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+    
+    header{
+        padding:1rem 2rem;
+    }
+
+    section{
+        padding:2rem;      
+        
+    }
+
+
+}
+
+@media (max-width:768px){
+
+    header .icons #menu-bars{
+        display: inline-block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top:100%; left:0; right:0;
+        background:#fff;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        padding:1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        display: block;
+        padding:1.5rem;
+        margin:1rem;
+        font-size: 2rem;
+        background:#eee;
+    }
+
+    
+
+    #search-form #search-box{
+        width:90%;
+        margin:0 1rem;
+    }  
+
+}
+.contact .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 100px;
+}
+
+.contact .row form {
+  padding: 2rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+    background-color: #FFF8D4;
+}
+
+.contact .row form h3 {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  color: #222;
+}
+
+.contact .row form .inputBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact .row form .inputBox input {
+  width: 49%;
+}
+
+.contact .row form .inputBox .box,
+.contact .row form textarea {
+  padding: 1rem 1.2rem;
+  font-size: 1.6rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  color: #222;
+  text-transform: none;
+  margin: .7rem 0;
+}
+
+.contact .row form textarea {
+  width: 100%;
+  height: 15rem;
+  resize: none;
+}
+.contact .row form .method {
+  padding: 1rem 1.2rem;
+  font-size: 1.6rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  color: #222;
+  text-transform: none;
+  margin: .7rem 0;
+}
+
+.contact .row form .method {
+  width: 100%;
+  height: 20rem;
+  resize: none;
+}
+.title{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*Cho 2 radio buton thanh toán */
+
+.phuongthuc {
+    font-weight: bold;   
+    font-size: 18px;
+}
+
+
+
+.title:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 150px;
+    border-radius: 2px;
+    background-color: #2ecc71;
+}
+
+.radio-item [type="radio"]{
+    display: none;
+}
+
+.radio-item{   
+    margin-bottom: 10px;
+    max-width: 1000px;
+  
+}
+.radio-section
+{
+    margin-top: -30px;       
+}
+
+.radio-item label{
+    display: flex;
+    padding: 7px 60px;
+    background: #000000;
+    border:2px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;    
+    white-space: nowrap;
+    position: relative;
+    color: #fff;
+     
+}
+.radio-item label:after,
+.radio-item label:before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.radio-item label:after{
+    height: 20px;
+    width: 20px;
+    border:2px solid #FFD705;
+    left: 20px;
+    top: calc(50% - 12px);
+}
+
+.radio-item label:before{
+    background: #FFD705;
+    height: 10px;
+    width: 10px;
+    left: 27px;
+    top: calc(50% - 5px);
+    transform: scale(5);
+    transition: .4s ease-in-out 0s;
+    opacity: 0;
+    visibility: hidden;
+}
+.radio-item [type="radio"]:checked ~ label{
+    border-color:#FFD705;
+}
+
+.radio-item [type="radio"]:checked ~ label:before{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+/*Cho 2 button trên popup */
+
+button {
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+  padding: 14px 22px;
+  border: none;
+  background: #3CCF4E;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #FFD705;
+}
+
+/* Cho popup đặt hàng ngay */
+
+button.show-modal
+{
+    
+    display: inline-block;
+    font-size:20px;
+    color:#fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;    
+    margin-left: 200px;
+}
+button.show-modal:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+    margin-left: 220px;
+}
+
+.modal-box {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.modal .active .show-modal {
+  display: none;
+}
+
+.modal-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 380px;
+  width: 100%;
+  padding: 30px 20px;
+  border-radius: 24px;
+  background-color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+.modal.active .modal-box {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal-box i {
+  font-size: 70px;
+  color: #2ecc71;
+}
+.modal-box h2 {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight:bold;
+  color: #333;
+}
+.modal-box h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+.modal-box .buttons {
+  margin-top: 25px;
+}
+.modal-box button {
+  font-size: 14px;
+  padding: 6px 12px;
+  margin: 0 10px;
+}
+.modal-box img
+{
+    height: 200px;
+    width: 200px;
+
+}
+
+/* Cho popup thanh toán bắng momo */
+.modalpayment.active .modal-box {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+</style>
+
+</head>
+<body>
+   <!--Thanh tiêu đề-->
+        <!--Thanh tiêu đề-->
+        <header>
+            <a href="/HTML/homepage.html" class="logo"><img src="/Image/logo (1).svg"></a>
+        
+        
+            <div class="icons">               
+                <i class="fas fa-search" id="search-icon"></i>
+                <a href="/HTML/cart.html" class="fas fa-shopping-cart"></a>                           
+            </div>    
+        </header>
+       <!--Thanh tiêu đề END-->
+<!-- search form  -->
+
+<form action="" id="search-form">
+    <input type="search" placeholder="Tìm món ăn" name="" id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+   <!-- home section starts  -->
+
+   <section class="contact">  
+   <div class="row">
+    <form action="">
+        <p class="title">THÊM THÔNG TIN CHI TIẾT</p>
+        <div class="inputBox">
+            <input type="text" placeholder="Tên của bạn" class="box">
+            <input type="email" placeholder="Email" class="box">
+        </div>
+        <div class="inputBox">
+            <input type="number" placeholder="Số điện thoại" class="box">
+            <input type="date" placeholder="Ngày sinh" class="box">
+        </div>
+        <textarea placeholder="Lời nhắn" cols="30" rows="10"></textarea>
+       
+        <div class="method">
+            <p class="phuongthuc">PHƯƠNG THỨC THANH TOÁN</p>
+            <section class="radio-section">
+                <div class="radio-list">
+                    <div class="radio-item">
+                        <input type="radio" name="radio" id="radio1">                      
+                        <label for="radio1">Thanh toán bằng tiền mặt</label>
+                    </div>
+                    <div class="radio-item" id="paymentmomo">
+                        <input type="radio" name="radio" id="radio2">
+                        <label for="radio2">Thanh toán bằng Momo</label>
+                    </div>  
+                    <section class="modalpayment">                                                    
+                     <!-- POPUP thanh toán momo-->                   
+                     <div class="modal-box">
+                        <img src="../Image/QRCODEMOMO.jfif">
+                        <h2>Quét mã QR</h2>
+                        <h3>Bạn hãy quét mã QR Code trên ứng dụng Mono để thực hiện thanh toán</h3>
+                        <div class="buttons">
+                          <a href="../HTML/startOrder.html"> <button class="close-btn">Hủy</button></a>
+                          <button onclick="myFunction()">Xác nhận</button>                           
+                        </div>
+                      </div>        
+                      </section>   
+                </div>
+    </form>  
+    </div> 
+</section>
+
+
+<!--POPUP ĐẶT HÀNG THÀNH CÔNG-->
+<section class="modal">  
+    <button class="show-modal">ĐẶT HÀNG NGAY</button>        
+    <div class="modal-box">
+      <i class="fa-regular fa-circle-check"></i>
+      <h2>Hoàn thành</h2>
+      <h3>Bạn đã đặt hàng thành công. Món ăn sẽ đến với bạn ngay.</h3>
+      <div class="buttons">
+        <<a href="/HTML/homepage.html"> <button class="close-btn">Về trang chủ</button></a>
+        <a href="#"" ><button class="open-order">Đơn hàng</button></a>    
+      </div>
+    </div>
+  </section>
+
+   
+
+  <!--FOOTER-->
+  <p class="" w3-include-html="footer.html"></p> 
+    
+  <script>
+      w3.includeHTML();         
+  </script>
+  
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- custom js file link  -->
+<script>
+    document.querySelector('#search-icon').onclick = () =>{
+    document.querySelector('#search-form').classList.toggle('active');
+  }
+  
+  document.querySelector('#close').onclick = () =>{
+    document.querySelector('#search-form').classList.remove('active');
+  }
+  
+  //Mở hợp thoại khi bấm vào đặt hàng ngay
+      const section = document.querySelector(".modal"),       
+        showBtn = document.querySelector(".show-modal"),
+        closeBtn = document.querySelector(".close-btn");
+        openBtn = document.querySelector(".open-order");
+      showBtn.addEventListener("click", () => section.classList.add("active"));
+      
+      
+
+  //Mở hợp thoại khi bấm vào thanh toán bằng momo
+      
+      const sectionmomo = document.querySelector(".modalpayment"),       
+        showBtnmomo = document.querySelector("#paymentmomo"),
+        closeBtnmomo = document.querySelector(".close-btn");
+      showBtnmomo.addEventListener("click", () => sectionmomo.classList.add("active"));    
+
+   
+     // Nhấn xác nhận ở hộp thoại thanh toán momo sẽ hiện ra dòng này
+      function myFunction() {
+        alert("Bạn đã thanh toán thành công.\n Hãy bấm đặt hàng ngay để đơn hàng được giao ngay.");
+}
+    
+</script>
+
+</body>
+</html>

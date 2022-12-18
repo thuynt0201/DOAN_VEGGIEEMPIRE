@@ -17,28 +17,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="https://www.w3schools.com/lib/w3.js"></script>
      <!--custom css file link-->
-     <link rel="stylesheet" href="/CSS/homepage.css">
+     <link rel="stylesheet" href="../CSS/homepage.css">
 
 </head>
 <body>
    <!--Thanh tiêu đề-->
         <!--Thanh tiêu đề-->
         <header>
-            <a href="#" class="logo"><img src="/Image/logo (1).svg"></a>
+            <a href="#" class="logo"><img src="../Image/logo (1).svg"></a>
         
             <nav class="navbar">
-                <a  class="active" href="/HTML/homepage.html">Trang chủ</a>
-                <a   href="/HTML/aboutus.html">Về chúng tôi</a>
-                <a href="/HTML/menu.html">Thực đơn</a>
-                <a   href="/HTML/policy.html">Chính sách</a>
-                <a href="/HTML/contact.html">Liên hệ</a>            
+                <a  class="active" href="../HTML/homepage.html">Trang chủ</a>
+                <a   href="../HTML/aboutus.html">Về chúng tôi</a>
+                <a href="../HTML/menu.html">Thực đơn</a>
+                <a   href="../HTML/policy.html">Chính sách</a>
+                <a href="../HTML/contact.html">Liên hệ</a>            
             </nav>
         
             <div class="icons">
                 <i class="fas fa-bars" id="menu-bars"></i>
                 <i class="fas fa-search" id="search-icon"></i>
-                <a class="fas fa-shopping-cart"></a>
-                <a href="/HTML/login.html" class="fas fa-user"></a>            
+                <a href="../HTML/cart.html" class="fas fa-shopping-cart"></a>
+                <i class="fas fa-user" id="search-user"></i>
+
+
             </div>    
         </header>
        <!--Thanh tiêu đề END-->
@@ -49,6 +51,35 @@
     <label for="search-box" class="fas fa-search"></label>
     <i class="fas fa-times" id="close"></i>
 </form>
+
+<form action="" id="login-form">
+    <div class="dropdown-menu  dropdown-menu-right ">
+       
+        <a href="../Đăng nhập/detailaccount.html" class="dropdown-item">
+            <i class="fas fa-circle-info"></i>
+          <span>Thông tin tài khoản</span>
+        </a>
+        <a href="#!" class="dropdown-item">
+            <i class="fas fa-check-to-slot"></i>
+          <span>Kiểm tra đơn hàng</span>
+        </a>
+        <a href="../Đăng nhập/OTPregister.html" class="dropdown-item">
+            <i class="fas fa-phone"></i>
+          <span>Đăng ký</span>
+        </a>
+        <a href="../Đăng nhập/login2.html" class="dropdown-item">
+            <i class="fas fa-right-to-bracket"></i>
+          <span>Đăng nhập</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="../Đăng nhập/detailaccount.html" class="dropdown-item">
+            <i class="fas fa-right-from-bracket"></i>
+          <span>Đăng xuất</span>
+        </a>
+      </div>
+</form>
+
+
    <!-- home section starts  -->
 
      <!-- HERO -->
@@ -57,7 +88,7 @@
             <div class="container">
                 <h3 class="h3">ĂN CHAY SIÊU NGON</h3>
                 <p>Món ăn thuần chay lành mạnh gồm các loại rau - bông cải xanh, nấm, rau bina và hạt diêm mạch</p>
-                <a href="#" class="btn">Đặt món ngay</a>
+                <a href="../HTML/menu.html" class="btn">Đặt món ngay</a>
                 
             </div>
         </div>
@@ -65,7 +96,7 @@
             <div class="container">
                 <h3 class="h3">THỰC ĐƠN ĂN KIÊNG</h3>
                 <p>Salad rau củ quả thuần chay tốt cho sức khỏe!</p>
-                <a href="" class="btn">Đặt món ngay</a>
+                <a href="../HTML/menu.html" class="btn">Đặt món ngay</a>
                 
             </div>                            
         </div>
@@ -88,7 +119,7 @@
                 Cùng với đó là một không gian yên tĩnh làm bạn thư giãn và gạt bỏ đi những ưu tư phiền muộn. Hãy cùng tham khảo và tìm hiểu thêm về nhà hàng chay của chúng tôi.   
             </p>
             <div class="button__wrapper">
-              <a href="AboutUs.html" class="btn primary-btn">Xem thêm</a>              
+              <a href="../HTML/aboutus.html" class="btn primary-btn">Xem thêm</a>              
             </div>
           </div>
         </div>
@@ -111,30 +142,40 @@
             <p>Chúng tôi cung cấp một loạt các món ăn  ngon nhất cho thực khách của chúng tôi.<br>Dưới đây là một số món ăn chính và nước uống phổ biến của chúng tôi.</p>
         </div>
         <div class="three-col-grid">
-            <div class="menu hover-effect1 ">
+            <a href="../HTML/menu.html"><div class="menu hover-effect1 ">
                 <h3 class="h4">High-Protein</h3>
                 <p>Trọn vị đậm đà, tà tà ăn ngon...</p>
-            </div>
-            <div class="menu hover-effect2 ">
-                <h3 class="h4">Healthy</h3>
-                <p>Món ăn thanh, gắp nhanh đũa</p>
-            </div>
-            <div class="menu hover-effect3 ">
+            </div></a>
+          
+            <a  href="../HTML/menu.html">
+                <div class="menu hover-effect2 ">
+                    <h3 class="h4">Healthy</h3>
+                    <p>Món ăn thanh, gắp nhanh đũa</p>
+                </div>
+            </a>
+           <a href="../HTML/menu.html"> <div class="menu hover-effect3 ">
                 <h3 class="h4">Salad</h3>
                 <p>Càng ngày thêm đẹp</p>
             </div>
-            <div class="menu hover-effect4 ">
-                <h3 class="h4">Hot Pot</h3>
-                <p>Canh thanh, lẫu nóng, bụng vui, ấm lòng</p>
-            </div>
+            </a>
+            <a  href="../HTML/menu.html">
+                <div class="menu hover-effect4 ">
+                    <h3 class="h4">Hot Pot</h3>
+                    <p>Canh thanh, lẫu nóng, bụng vui, ấm lòng</p>
+                </div>
+            </a>
+            <a href="../HTML/menu.html" >
             <div class="menu hover-effect5 ">
                                <h3 class="h4">Super Quick</h3>
                 <p>Không phải chờ, vậy gọi này món này đi...</p>
             </div>
+            </a>
+            <a href="../HTML/menu.html">
             <div class="menu hover-effect6 ">
                 <h3 class="h4">Drinks</h3>
                 <p>Trọn vẹn bữa ăn</p>
             </div>
+        </a>
         </div>
     </div>
 </section>
@@ -276,7 +317,7 @@
                 </div>
                 <p class="saying">Ở đây có không khí yên tĩnh nhẹ nhàng, bày trí trang nhã, một nơi vừa thưởng thức món ăn chay thanh đạm vừa thư giãn tinh thần.</p>
                 <div class="person">
-                    <img class="customer" src="/Image/davika.webp" alt="">
+                    <img class="customer" src="../Image/davika.webp" alt="">
                     <div>
                         <h5 class="h5">Mai Davika</h5>
                         <p>Model</p>
@@ -297,7 +338,7 @@
                 </div>
                 <p class="saying">Nơi bạn bè, người thân có thể đến đây không chỉ để ăn những món chay thường ngày, mà còn được tận hưởng không gian thư giãn. </p>
                 <div class="person">
-                    <img class="customer" src="/Image/lisa.jpg" alt="">
+                    <img class="customer" src="../Image/lisa.jpg" alt="">
                     <div>
                         <h5 class="h5">Lisa</h5>
                         <p>Singer</p>
@@ -318,7 +359,7 @@
                 </div>
                 <p class="saying">Các món ăn thanh nhẹ nhưng hương vị vẫn đậm nét. Vẫn là rau củ, đậu mà có sự biến hóa rất tinh tế. Xin cảm ơn Veggie Empire</p>
                 <div class="person">
-                    <img class="customer" src="/Image/địch lệ nhiệt ba.jpg" alt="">
+                    <img class="customer" src="../Image/địch lệ nhiệt ba.jpg" alt="">
                     <div>
                         <h5 class="h5">Địch Lệ Nhiệt Ba</h5>
                         <p>Blogger</p>
@@ -339,7 +380,7 @@
                 </div>
                 <p class="saying">Cuối tuần vừa rồi mình có cùng gia đình đến ăn tối tại Veggie Empire. Các món chay ngon và thái độ phục vụ tuyệt vời. Gia đình rất hài lòng."</p>
                 <div class="person">
-                    <img class="customer" src="/Image/Son_Ye_Jin_1_thumb.jpg" alt="">
+                    <img class="customer" src="../Image/Son_Ye_Jin_1_thumb.jpg" alt="">
                     <div>
                         <h5 class="h5">Son Ye Jin</h5>
                         <p>Actor</p>
@@ -365,7 +406,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <!-- custom js file link  -->
-<script src="/JavaScript/homepage.js"></script>
+<script src="../JavaScript/homepage.js"></script>
 
 </body>
 </html>

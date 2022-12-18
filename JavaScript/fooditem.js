@@ -6,7 +6,7 @@ const foodItem= [
     category : 'High-Protein',
     rating : 4.3,
     price: 59000,
-    img: '/imagemenu/high/dau hu la lot.jpg',
+    img: '../imagemenu/high/dau hu la lot.jpg',
     quantity: 1
 },
 {
@@ -15,7 +15,7 @@ const foodItem= [
     category : 'High-Protein',
     rating : 4.3,
     price: 79000,
-    img: '/imagemenu/high/đậu phụ rau diếp cuôn (1).png',
+    img: '../imagemenu/high/đậu phụ rau diếp cuôn (1).png',
     quantity: 1
 },
 {
@@ -24,7 +24,7 @@ const foodItem= [
     category : 'High-Protein',
     rating : 4.3,
     price: 89000,
-    img: '/imagemenu/high/súp đậu lăng với nấm.png',
+    img: '../imagemenu/high/súp đậu lăng với nấm.png',
     quantity: 1
 },
 {
@@ -33,7 +33,7 @@ const foodItem= [
     category : 'High-Protein',
     rating : 4.3,
     price: 89000,
-    img: '/imagemenu/high/cà ri súp lơ (1).png',
+    img: '../imagemenu/high/cà ri súp lơ (1).png',
     quantity: 1
 },
 {
@@ -42,7 +42,7 @@ const foodItem= [
     category : 'High-Protein',
     rating : 4.3,
     price: 89000,
-    img: '/imagemenu/high/cà chua.jpg',
+    img: '../imagemenu/high/cà chua.jpg',
     quantity: 1
 },
 {
@@ -51,7 +51,7 @@ const foodItem= [
     category : 'High-Protein',
     rating : 4.3,
     price: 109000,
-    img: '/imagemenu/high/ớt nhồi thịt chay (1).png',
+    img: '../imagemenu/high/ớt nhồi thịt chay (1).png',
     quantity: 1
 },
 
@@ -62,7 +62,7 @@ const foodItem= [
     category : 'healthy',
     rating : 4.3,
     price: 59000,
-    img: '/imagemenu/healthy/Bánh mì rau củ.jpg',
+    img: '../imagemenu/healthy/Bánh mì rau củ.jpg',
     quantity: 1
 },
 {
@@ -71,7 +71,7 @@ const foodItem= [
     category : 'healthy',
     rating : 4.3,
     price: 69000,
-    img: '/imagemenu/healthy/súp bí ngô (1).png',
+    img: '../imagemenu/healthy/súp bí ngô (1).png',
     quantity: 1
 },
 {
@@ -80,7 +80,7 @@ const foodItem= [
     category : 'healthy',
     rating : 4.3,
     price: 79000,
-    img: '/imagemenu/healthy/gỏi rau củ.jpeg',
+    img: '../imagemenu/healthy/gỏi rau củ.jpeg',
     quantity: 1
 },
 {
@@ -89,7 +89,7 @@ const foodItem= [
     category : 'healthy',
     rating : 4.3,
     price: 89000,
-    img: '/imagemenu/healthy/salad khoai lang nướng (1).png',
+    img: '../imagemenu/healthy/salad khoai lang nướng (1).png',
     quantity: 1
 },
 
@@ -99,7 +99,7 @@ const foodItem= [
     category : 'healthy',
     rating : 4.3,
     price: 109000,
-    img: '/imagemenu/soup rau thập cẩm (1).png',
+    img: '../imagemenu/soup rau thập cẩm (1).png',
     quantity: 1
 },
 {
@@ -108,7 +108,7 @@ const foodItem= [
     category : 'healthy',
     rating : 4.3,
     price: 89000,
-    img: '/imagemenu/healthy/salad khoai tay.jpg',
+    img: '../imagemenu/healthy/salad khoai tay.jpg',
     quantity: 1
 },
 
@@ -119,7 +119,7 @@ const foodItem= [
     category : 'Super-Quick',
     rating : 4.3,
     price: 59000,
-    img: '/imagemenu/quick/kebab rau củ.jpg',
+    img: '../imagemenu/quick/kebab rau củ.jpg',
     quantity: 1
 
 },
@@ -129,7 +129,7 @@ const foodItem= [
     category : 'Super-Quick',
     rating : 4.3,
     price: 89000,
-    img: '/imagemenu/quick/phô mai nướng (1).png',
+    img: '../imagemenu/quick/phô mai nướng (1).png',
     quantity: 1
 },
 {
@@ -138,7 +138,7 @@ const foodItem= [
     category : 'Super-Quick',
     rating : 4.3,
     price: 89000,
-    img: '/imagemenu/quick/mì ramen tỏi mè (1).png',
+    img: '../imagemenu/quick/mì ramen tỏi mè (1).png',
     quantity: 1
 },
 
@@ -150,7 +150,7 @@ const foodItem= [
     category : 'hotpot',
     rating : 4.3,
     price: 209000,
-    img: '/imagemenu/hotpot/lẫu shabu shabu.jpg',
+    img: '../imagemenu/hotpot/lẫu shabu shabu.jpg',
     quantity: 1
 },
 {
@@ -159,7 +159,7 @@ const foodItem= [
     category : 'hotpot',
     rating : 4.3,
     price: 209000,
-    img: '/imagemenu/hotpot/lẫu thái.jpg',
+    img: '../imagemenu/hotpot/lẫu thái.jpg',
     quantity: 1
 },
 {
@@ -168,7 +168,7 @@ const foodItem= [
     category : 'hotpot',
     rating : 4.3,
     price: 209000,
-    img: '/imagemenu/hotpot/lẫu truyền thống.jpg',
+    img: '../imagemenu/hotpot/lẫu truyền thống.jpg',
     quantity: 1
 },
 
@@ -180,7 +180,7 @@ const foodItem= [
     category : 'drinks',
     rating : 4.3,
     price: 25000,
-    img: '/imagemenu/drink/nuoc-chanh-tuoi.jpg',
+    img: '../imagemenu/drink/nuoc-chanh-tuoi.jpg',
     quantity: 1
 },
 {
@@ -189,7 +189,7 @@ const foodItem= [
     category : 'drinks',
     rating : 4.3,
     price: 25000,
-    img: '/imagemenu/drink/nuoc_mia.jpg',
+    img: '../imagemenu/drink/nuoc_mia.jpg',
     quantity: 1
 },
 {
@@ -198,7 +198,7 @@ const foodItem= [
     category : 'drinks',
     rating : 4.3,
     price: 25000,
-    img: '/imagemenu/drink/hoa cuc.jpg',
+    img: '../imagemenu/drink/hoa cuc.jpg',
     quantity: 1
 },
 {
@@ -207,7 +207,7 @@ const foodItem= [
     category : 'drinks',
     rating : 4.3,
     price: 25000,
-    img: '/imagemenu/drink/tra-hoa-hong.jpg',
+    img: '../imagemenu/drink/tra-hoa-hong.jpg',
     quantity: 1
 },
 {
@@ -216,7 +216,7 @@ const foodItem= [
     category : 'drinks',
     rating : 4.3,
     price: 25000,
-    img: '/imagemenu/drink/nuoc sam.jpg',
+    img: '../imagemenu/drink/nuoc sam.jpg',
     quantity: 1
 },
 {
@@ -225,7 +225,7 @@ const foodItem= [
     category : 'drinks',
     rating : 4.3,
     price: 25000,
-    img: '/imagemenu/drink/việt quất.jpg',
+    img: '../imagemenu/drink/việt quất.jpg',
     quantity: 1
 },
 {
@@ -234,7 +234,7 @@ const foodItem= [
     category : 'drinks',
     rating : 4.3,
     price: 25000,
-    img: '/imagemenu/drink/cam-ep.jpg',
+    img: '../imagemenu/drink/cam-ep.jpg',
     quantity: 1
 },
 {
@@ -243,7 +243,7 @@ const foodItem= [
     category : 'drinks',
     rating : 4.3,
     price: 25000,
-    img: '/imagemenu/drink/Nước ép dứa.jpg',
+    img: '../imagemenu/drink/Nước ép dứa.jpg',
     quantity: 1
 },
 {
@@ -252,7 +252,7 @@ const foodItem= [
     category : 'drinks',
     rating : 4.3,
     price: 25000,
-    img: '/imagemenu/drink/cà rốt.jpg',
+    img: '../imagemenu/drink/cà rốt.jpg',
     quantity: 1
 },
 
