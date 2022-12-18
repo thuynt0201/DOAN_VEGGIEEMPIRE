@@ -116,9 +116,9 @@ header .icons #menu-bars{
 #search-form{
     position: fixed;
     margin-top: 9rem;
-    top:110%; right: 0;     
+    top:110%; right: 0;    
     z-index: 1004;
-    background:rgba(88, 87, 74, 0.766);   
+    background:rgba(88, 87, 74, 0.766);  
     padding:0 1rem;    
     width: 50rem;
     border-radius: .5rem;
@@ -131,13 +131,13 @@ header .icons #menu-bars{
     height: 5.5rem;
     -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-
+ 
 }
-
+ 
 #search-form.active{
     top:0;
 }
-
+ 
 #search-form #search-box{
     width:50rem;
     border-bottom: .1rem solid #fff;
@@ -147,25 +147,25 @@ header .icons #menu-bars{
     text-transform: none;
     background:none;
 }
-
+ 
 #search-form #search-box::placeholder{
     color:#eee;
 }
-
+ 
 #search-form #search-box::-webkit-search-cancel-button{
     -webkit-appearance: none;
 }
-
+ 
 #search-form label{
     color:#fff;
     cursor:pointer;
     font-size: 3rem;
 }
-
+ 
 #search-form label:hover{
     color:var(--green);
 }
-
+ 
 #login-form {
     position: fixed;
     margin-top: 9rem;
@@ -233,33 +233,33 @@ header .icons #menu-bars{
  
       padding: 2rem 1.5rem;
   }
-
+ 
 /* media queries  */
-
+ 
 @media (max-width:991px){
-
+ 
     html{
         font-size: 55%;
     }
-    
+   
     header{
         padding:1rem 2rem;
     }
-
+ 
     section{
         padding:2rem;      
-        
+       
     }
-
-
+ 
+ 
 }
-
+ 
 @media (max-width:768px){
-
+ 
     header .icons #menu-bars{
         display: inline-block;
     }
-
+ 
     header .navbar{
         position: absolute;
         top:100%; left:0; right:0;
@@ -269,11 +269,11 @@ header .icons #menu-bars{
         padding:1rem;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
-
+ 
     header .navbar.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
-
+ 
     header .navbar a{
         display: block;
         padding:1.5rem;
@@ -281,15 +281,15 @@ header .icons #menu-bars{
         font-size: 2rem;
         background:#eee;
     }
-
+ 
     #search-form #search-box{
         width:90%;
         margin:0 1rem;
     }  
-
+ 
 }
-
-
+ 
+ 
 /* ========== HEADER END====  */
  
 /* ========== HEADER END====  */
@@ -313,8 +313,8 @@ header .icons #menu-bars{
     color: #18B515;
     margin: 0;
 }
-
-
+ 
+ 
 h2{
     text-align: center;
     font-weight: 300;
@@ -348,15 +348,15 @@ h2{
     padding:.8rem 3rem;
     margin-left: 10px;
 }
-
-
+ 
+ 
 .btn:hover{
     background: #18B515;
     letter-spacing: .1rem;
     margin-left: 30px;
 }
-
-
+ 
+ 
 .btn-choose{
     padding-top: 30px;
 }
@@ -530,7 +530,7 @@ color: white;
     background: white;
     padding: 10px 20px;
 }
-
+ 
 #checkout p{
     margin: 15px 0;
     float: left;
@@ -605,17 +605,17 @@ color: white;
     .containe{
         display: none;
     }
-    
+   
     #mobile-view{
         display: grid;
         grid-template-rows: 100px 1fr;
         height: 100%;
         overflow: hidden;
-        
+       
         width: 100vw;
     }
     .mobile-top{
-        
+       
         background: white;
         z-index: 1;
     }
@@ -644,9 +644,9 @@ color: white;
         text-align: center;
         background-color: rgb(255, 255, 255);
     }
-
-
-
+ 
+ 
+ 
     .list-card img{
         width: 60px;
         height: 60px;
@@ -668,8 +668,8 @@ color: white;
     #food-items{        
         padding: 5px 10px;
     }
-
-    
+ 
+   
     #category-name{
         font-size: 25px;
     }
@@ -682,7 +682,7 @@ color: white;
     #item-card, #card-top{
       padding-top: 4px;
     }
-
+ 
     #card-top, #rating{
         font-size: 12px;
     }
@@ -733,11 +733,11 @@ color: white;
     .btn-box{
         text-align: center;
     }
-    
-
-    
+   
+ 
+   
 }
-
+ 
 @media screen and (max-width : 400px) and (-webkit-min-device-pixel-ratio: 2){
     #mobile-view{
         min-height: -webkit-fill-available;
@@ -757,21 +757,384 @@ color: white;
     #item-price{
         font-size: 10px;
     }
-
+ 
     #card-top, #rating{
         font-size: 8px;
     }
-
+ 
     #item-card img{
         width: 70px;
         height: 70px;
     }
-
+ 
     #food-items{
         padding: 0;
     }
 }
-
  
  
-
+.containeraddress{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+    margin-top: 0px;
+   
+}
+ 
+ 
+.contact-box{
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+    height: 250px;
+}
+ 
+.left{
+    background: url(/Image/slide4.jpg) no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
+ 
+.right{
+    padding: 25px 40px;
+}
+.title{
+    position: relative;
+    padding: 0 0 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.titlesub{
+    position: relative;
+    padding: 0 0 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+   
+}
+ 
+ 
+.title:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 200px;
+    border-radius: 2px;
+    background-color: #2ecc71;
+}
+ 
+.field{
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    outline: none;
+    background-color: rgba(230, 230, 230, 0.6);
+    padding: 0.5rem 1rem;
+    font-size:22px;
+    margin-bottom: 22px;
+    transition: .3s;
+    border-radius: 0.5rem;
+}
+ 
+.field:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+ 
+textarea{
+    min-height: 150px;
+}
+ 
+ 
+ 
+.field:focus{
+    border: 2px solid #2ecc71;
+    background-color: #fff;
+    border-radius: 0.5rem;
+}
+ 
+@media screen and (max-width: 880px){
+    .contact-box{
+        grid-template-columns: 1fr;
+    }
+    .left{
+        height: 200px;
+    }
+   
+}
+ 
+.contact .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 100px;
+  }
+ 
+  .contact .row form {
+    padding: 2rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40rem;
+            flex: 1 1 40rem;
+      background-color: #FFF8D4;
+  }
+ 
+  .contact .row form h3 {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    color: #222;
+  }
+ 
+  .contact .row form .inputBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+ 
+  .contact .row form .inputBox input {
+    width: 49%;
+  }
+ 
+  .contact .row form .inputBox .box,
+  .contact .row form textarea {
+    padding: 1rem 1.2rem;
+    font-size: 1.6rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    color: #222;
+    text-transform: none;
+    margin: .7rem 0;
+  }
+ 
+  .contact .row form textarea {
+    width: 100%;
+    height: 15rem;
+    resize: none;
+  }
+  .contact .row form .method {
+    padding: 1rem 1.2rem;
+    font-size: 1.6rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    color: #222;
+    text-transform: none;
+    margin: .7rem 0;
+  }
+ 
+  .contact .row form .method {
+    width: 100%;
+    height: 20rem;
+    resize: none;
+  }
+  .title{
+      position: relative;
+      padding: 0 0 10px;
+      margin-bottom: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+  }
+ 
+  /*Cho 2 radio buton thanh toán */
+ 
+  .phuongthuc {
+      font-weight: bold;  
+      font-size: 18px;
+  }
+ 
+ 
+ 
+  .title:after{
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      height: 4px;
+      width: 150px;
+      border-radius: 2px;
+      background-color: #2ecc71;
+  }
+ 
+  .radio-item [type="radio"]{
+      display: none;
+  }
+ 
+  .radio-item{  
+      margin-bottom: 10px;
+      max-width: 1000px;
+   
+  }
+  .radio-section
+  {
+      margin-top: -30px;      
+  }
+ 
+  .radio-item label{
+      display: flex;
+      padding: 7px 60px;
+      background: #000000;
+      border:2px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 400;    
+      white-space: nowrap;
+      position: relative;
+      color: #fff;
+       
+  }
+  .radio-item label:after,
+  .radio-item label:before{
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+  }
+ 
+  .radio-item label:after{
+      height: 20px;
+      width: 20px;
+      border:2px solid #FFD705;
+      left: 20px;
+      top: calc(50% - 12px);
+  }
+ 
+  .radio-item label:before{
+      background: #FFD705;
+      height: 10px;
+      width: 10px;
+      left: 27px;
+      top: calc(50% - 5px);
+      transform: scale(5);
+      transition: .4s ease-in-out 0s;
+      opacity: 0;
+      visibility: hidden;
+  }
+  .radio-item [type="radio"]:checked ~ label{
+      border-color:#FFD705;
+  }
+ 
+  .radio-item [type="radio"]:checked ~ label:before{
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+  }
+ 
+  /*Cho 2 button trên popup */
+ 
+  button {
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    padding: 14px 22px;
+    border: none;
+    background: #3CCF4E;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #FFD705;
+  }
+ 
+  /* Cho popup đặt hàng ngay */
+ 
+  button.show-modal
+  {
+     
+      display: inline-block;
+      font-size:20px;
+      color:#fff;
+      background: var(--black);
+      border-radius: .5rem;
+      cursor: pointer;    
+      margin-left: 200px;
+  }
+  button.show-modal:hover{
+      background: var(--green);
+      letter-spacing: .1rem;
+      margin-left: 220px;
+  }
+ 
+  .modal-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .modal .active .show-modal {
+    display: none;
+  }
+ 
+  .modal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 380px;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 24px;
+    background-color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  .modal.active .modal-box {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .modal-box i {
+    font-size: 70px;
+    color: #2ecc71;
+  }
+  .modal-box h2 {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight:bold;
+    color: #333;
+  }
+  .modal-box h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+  }
+  .modal-box .buttons {
+    margin-top: 25px;
+  }
+  .modal-box button {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin: 0 10px;
+  }
+  .modal-box img
+  {
+      height: 200px;
+      width: 200px;
+ 
+  }
+ 
+  /* Cho popup thanh toán bắng momo */
+  .modalpayment.active .modal-box {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }

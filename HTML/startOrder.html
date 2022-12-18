@@ -329,7 +329,7 @@ header .icons a:hover{
 }
 .radio-section
 {
-    margin-top: -30px;       
+    margin-top: -20px;       
 }
 
 .radio-item label{
@@ -542,8 +542,8 @@ button.show-modal:hover{
                         <h2>Quét mã QR</h2>
                         <h3>Bạn hãy quét mã QR Code trên ứng dụng Mono để thực hiện thanh toán</h3>
                         <div class="buttons">
-                          <a href="../HTML/startOrder.html"> <button class="close-btn">Hủy</button></a>
-                          <button onclick="myFunction()">Xác nhận</button>                           
+                        <button class="close-popup">Hủy</button>
+                          <button class="open-popup" onclick="myFunction()">Xác nhận</button>                           
                         </div>
                       </div>        
                       </section>   
@@ -593,26 +593,27 @@ button.show-modal:hover{
   }
   
   //Mở hợp thoại khi bấm vào đặt hàng ngay
-      const section = document.querySelector(".modal"),       
+const section = document.querySelector(".modal"),       
         showBtn = document.querySelector(".show-modal"),
         closeBtn = document.querySelector(".close-btn");
         openBtn = document.querySelector(".open-order");
-      showBtn.addEventListener("click", () => section.classList.add("active"));
-      
+      showBtn.addEventListener("click", () => section.classList.add("active"));     
       
 
   //Mở hợp thoại khi bấm vào thanh toán bằng momo
       
-      const sectionmomo = document.querySelector(".modalpayment"),       
+      const sectionmomo = document.querySelector(".modalpayment"),    
+        sectionoder = document.querySelector(".modal"),   
         showBtnmomo = document.querySelector("#paymentmomo"),
-        closeBtnmomo = document.querySelector(".close-btn");
-      showBtnmomo.addEventListener("click", () => sectionmomo.classList.add("active"));    
+        closeBtnmomo = document.querySelector(".close-popup");
+        openPopuporder = document.querySelector(".open-popup");
+      showBtnmomo.addEventListener("click", () => sectionmomo.classList.add("active")); 
+     closeBtnmomo.addEventListener("click", () => sectionmomo.classList.remove("active"));   
+    openPopuporder.addEventListener("click", () => sectionoder.classList.add("active"));   
 
    
      // Nhấn xác nhận ở hộp thoại thanh toán momo sẽ hiện ra dòng này
-      function myFunction() {
-        alert("Bạn đã thanh toán thành công.\n Hãy bấm đặt hàng ngay để đơn hàng được giao ngay.");
-}
+     
     
 </script>
 
