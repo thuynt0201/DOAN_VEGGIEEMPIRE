@@ -18,6 +18,15 @@ document.querySelector('#close').onclick = () =>{
   document.querySelector('#search-form').classList.remove('active');
 }
 
+document.querySelector('#search-user').onclick = () =>{
+    document.querySelector('#login-form').classList.toggle('active');
+  }
+ 
+  document.querySelector('#close').onclick = () =>{
+    document.querySelector('#login-form').classList.remove('active');
+  }
+
+
 /* ===========================================================================*/
 const carousel = document.querySelector(".carousel"),
 firstImg = carousel.querySelectorAll("img")[0],

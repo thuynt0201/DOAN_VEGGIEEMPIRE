@@ -1,4 +1,4 @@
-import {foodItem} from '../JavaScript/fooditem.js'
+import {foodItem} from '/JavaScript/fooditem.js'
 
 
 
@@ -20,14 +20,6 @@ document.querySelector('#search-icon').onclick = () =>{
 document.querySelector('#close').onclick = () =>{
   document.querySelector('#search-form').classList.remove('active');
 }
-
-document.querySelector('#search-user').onclick = () =>{
-    document.querySelector('#login-form').classList.toggle('active');
-  }
-  
-  document.querySelector('#close').onclick = () =>{
-    document.querySelector('#login-form').classList.remove('active');
-  }
 
 /* ===========================================================================*/
 
@@ -465,18 +457,4 @@ function addEvents(){
     document.querySelectorAll('.decrease-item').forEach(item=>{
         item.addEventListener('click',decrementItem)
     })
-}
-
-document.getElementById('add-address').addEventListener('click',addAddress);
-
-document.getElementById('m-add-address').addEventListener('click',addAddress);
-
-function addAddress(){
-    var address= prompt('Enter your address','');
-    if(address){
-        document.getElementById('add-address').innerText= ' ' + address;
-    }
-    else{
-        alert("Address not added")
-    }
 }

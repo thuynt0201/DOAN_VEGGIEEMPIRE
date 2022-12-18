@@ -285,7 +285,7 @@ header .icons a:hover{
 
 .contact .row form .method {
   width: 100%;
-  height: 15rem;
+  height: 20rem;
   resize: none;
 }
 .title{
@@ -297,9 +297,10 @@ header .icons a:hover{
     text-align: center;
 }
 
+/*Cho 2 radio buton thanh toán */
+
 .phuongthuc {
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-weight: bold;   
     font-size: 18px;
 }
 
@@ -320,27 +321,30 @@ header .icons a:hover{
 .radio-item [type="radio"]{
     display: none;
 }
-.radio-list{
-    margin-top: -20px;
-   
+
+.radio-item{   
+    margin-bottom: 10px;
+    max-width: 1000px;
+  
+}
+.radio-section
+{
+    margin-top: -30px;       
 }
 
-.radio-item + .radio-item{
-    margin-top: 10px;
-}
 .radio-item label{
-    display: block;
-    padding: 5px 50px;
+    display: flex;
+    padding: 7px 60px;
     background: #000000;
     border:2px solid rgba(255,255,255,0.1);
     border-radius: 6px;
     cursor: pointer;
     font-size: 18px;
-    font-weight: 400;
-    min-width: 250px;
+    font-weight: 400;    
     white-space: nowrap;
     position: relative;
     color: #fff;
+     
 }
 .radio-item label:after,
 .radio-item label:before{
@@ -356,6 +360,7 @@ header .icons a:hover{
     left: 20px;
     top: calc(50% - 12px);
 }
+
 .radio-item label:before{
     background: #FFD705;
     height: 10px;
@@ -377,52 +382,7 @@ header .icons a:hover{
     transform: scale(1);
 }
 
-.btn1{
-    margin-top: 1rem;
-    display: inline-block;
-    font-size:14px;
-    color:#fff;
-    background: var(--black);
-    border-radius: .5rem;
-    cursor: pointer;
-    padding:.8rem 3rem;
-    margin-left: 30px;
-}
-
-.btn1:hover{
-    background: var(--green);
-    letter-spacing: .1rem;
-    margin-left: 30px;
-}
-
-.discount {
-    font-size: 18px;
-    font-weight: bold;
-}
-.tbcart{
-    width: 100%;
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-
- .price{
-    text-align: right;    
-    font-weight: bold;
-
-}
-.tbpayment
-{
-    width: 100%;
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    
-}
-
+/*Cho 2 button trên popup */
 
 button {
   font-size: 24px;
@@ -437,6 +397,8 @@ button {
 button:hover {
   background-color: #FFD705;
 }
+
+/* Cho popup đặt hàng ngay */
 
 button.show-modal
 {
@@ -509,7 +471,20 @@ button.show-modal:hover{
   padding: 6px 12px;
   margin: 0 10px;
 }
-     </style>
+.modal-box img
+{
+    height: 200px;
+    width: 200px;
+
+}
+
+/* Cho popup thanh toán bắng momo */
+.modalpayment.active .modal-box {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+</style>
 
 </head>
 <body>
@@ -534,12 +509,8 @@ button.show-modal:hover{
 </form>
    <!-- home section starts  -->
 
-   <section class="contact">
-
-   
-    
+   <section class="contact">  
    <div class="row">
-
     <form action="">
         <p class="title">THÊM THÔNG TIN CHI TIẾT</p>
         <div class="inputBox">
@@ -551,8 +522,8 @@ button.show-modal:hover{
             <input type="date" placeholder="Ngày sinh" class="box">
         </div>
         <textarea placeholder="Lời nhắn" cols="30" rows="10"></textarea>
-        <div class="inputBox">
-           <div class="method">
+       
+        <div class="method">
             <p class="phuongthuc">PHƯƠNG THỨC THANH TOÁN</p>
             <section class="radio-section">
                 <div class="radio-list">
@@ -560,54 +531,29 @@ button.show-modal:hover{
                         <input type="radio" name="radio" id="radio1">                      
                         <label for="radio1">Thanh toán bằng tiền mặt</label>
                     </div>
-                    <div class="radio-item">
+                    <div class="radio-item" id="paymentmomo">
                         <input type="radio" name="radio" id="radio2">
                         <label for="radio2">Thanh toán bằng Momo</label>
-                    </div>                    
+                    </div>  
+                    <section class="modalpayment">                                                    
+                     <!-- POPUP thanh toán momo-->                   
+                     <div class="modal-box">
+                        <img src="../Image/QRCODEMOMO.jfif">
+                        <h2>Quét mã QR</h2>
+                        <h3>Bạn hãy quét mã QR Code trên ứng dụng Mono để thực hiện thanh toán</h3>
+                        <div class="buttons">
+                          <a href="../HTML/startOrder.html"> <button class="close-btn">Hủy</button></a>
+                          <button onclick="myFunction()">Xác nhận</button>                           
+                        </div>
+                      </div>        
+                      </section>   
                 </div>
-            </section>
-           </div>
-        </div>
-       
-    </form>
-    <form action="">
-        <p class="title">TÓM TẮT ĐƠN HÀNG</p>
-        <p class="discount">Bạn có mã giảm giá không</p>
-        <input type="text" placeholder="Mã giãm giá" class="box">
-        <input type="submit" value="Áp dụng" class="btn1">
-        <table class="tbcart">
-            <tr>
-              <td class="nameDish">Nước ép cam (x1)</td>
-              <td class="price">25.000</td>              
-            </tr>
-            <tr>
-              <td class="nameDish">Ớt chuông nhồi cơm chiên (x2)</td>
-              <td class="price">218.000</td>
-            </tr>
-            <tr>
-                <td class="nameDish">Gỏi rau củ (x1)</td>
-                <td class="price">79.000</td>
-              </tr>
-          </table>
-          
-          <p>-------------------------</p>
-          <table class="tbpayment">
-            <tr>
-              <td>Tổng</td>
-              <td class="price">322.000 đ</td>              
-            </tr>
-            <tr>
-              <td>Phí giao hàng</td>
-              <td class="price">22.000 đ</td>
-            </tr>
-            <tr>
-                <td>Tổng thanh toán</td>
-                <td class="price">344.000 đ</td>
-              </tr>
-          </table>
-    </form>
-</div>
+    </form>  
+    </div> 
 </section>
+
+
+<!--POPUP ĐẶT HÀNG THÀNH CÔNG-->
 <section class="modal">  
     <button class="show-modal">ĐẶT HÀNG NGAY</button>        
     <div class="modal-box">
@@ -615,8 +561,8 @@ button.show-modal:hover{
       <h2>Hoàn thành</h2>
       <h3>Bạn đã đặt hàng thành công. Món ăn sẽ đến với bạn ngay.</h3>
       <div class="buttons">
-        <a href="/HTML/homepage.html"> <button class="close-btn">Về trang chủ</button></a>
-        <a href="#"">  <button>Đơn hàng</button></a>   
+        <<a href="/HTML/homepage.html"> <button class="close-btn">Về trang chủ</button></a>
+        <a href="#"" ><button class="open-order">Đơn hàng</button></a>    
       </div>
     </div>
   </section>
@@ -646,14 +592,27 @@ button.show-modal:hover{
     document.querySelector('#search-form').classList.remove('active');
   }
   
-      const section = document.querySelector(".modal"),
-        overlay = document.querySelector(".overlay"),
+  //Mở hợp thoại khi bấm vào đặt hàng ngay
+      const section = document.querySelector(".modal"),       
         showBtn = document.querySelector(".show-modal"),
         closeBtn = document.querySelector(".close-btn");
-
+        openBtn = document.querySelector(".open-order");
       showBtn.addEventListener("click", () => section.classList.add("active"));
-
       
+      
+
+  //Mở hợp thoại khi bấm vào thanh toán bằng momo
+      
+      const sectionmomo = document.querySelector(".modalpayment"),       
+        showBtnmomo = document.querySelector("#paymentmomo"),
+        closeBtnmomo = document.querySelector(".close-btn");
+      showBtnmomo.addEventListener("click", () => sectionmomo.classList.add("active"));    
+
+   
+     // Nhấn xác nhận ở hộp thoại thanh toán momo sẽ hiện ra dòng này
+      function myFunction() {
+        alert("Bạn đã thanh toán thành công.\n Hãy bấm đặt hàng ngay để đơn hàng được giao ngay.");
+}
     
 </script>
 
