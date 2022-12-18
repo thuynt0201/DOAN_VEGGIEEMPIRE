@@ -465,24 +465,22 @@ function addEvents(){
     document.querySelectorAll('.decrease-item').forEach(item=>{
         item.addEventListener('click',decrementItem)
     })    
-    //Mở hợp thoại khi bấm vào đặt hàng ngay
-    const section = document.querySelector(".modal"),       
-            showBtn = document.querySelector(".show-modal"),
-            closeBtn = document.querySelector(".close-btn");
-            openBtn = document.querySelector(".open-order");
-          showBtn.addEventListener("click", () => section.classList.add("active"));     
-          
-    
-      //Mở hợp thoại khi bấm vào thanh toán bằng momo
-          
-          const sectionmomo = document.querySelector(".modalpayment"),    
-            sectionoder = document.querySelector(".modal"),   
-            showBtnmomo = document.querySelector("#paymentmomo"),
-            closeBtnmomo = document.querySelector(".close-popup");
-            openPopuporder = document.querySelector(".open-popup");
-          showBtnmomo.addEventListener("click", () => sectionmomo.classList.add("active")); 
-         closeBtnmomo.addEventListener("click", () => sectionmomo.classList.remove("active"));   
-        openPopuporder.addEventListener("click", () => section.classList.add("active"));   
+     //Mở hợp thoại khi bấm vào đặt hàng ngay
+     const section = document.querySelector(".modal"),       
+     showBtn = document.querySelector(".show-modal"),
+     closeBtn = document.querySelector(".close-btn");
+     openBtn = document.querySelector(".open-order");
+   showBtn.addEventListener("click", () => section.classList.add("active"));     
+   
+
+//Mở hợp thoại khi bấm vào thanh toán bằng momo   
+   const sectionmomo = document.querySelector(".modalpayment"),    
+     sectionoder = document.querySelector(".modal"),   
+     showBtnmomo = document.querySelector("#paymentmomo"),
+     closeBtnmomo = document.querySelector(".close-popup");
+     openPopuporder = document.querySelector(".open-order");
+   showBtnmomo.addEventListener("click", () => sectionmomo.classList.add("active")); 
+  closeBtnmomo.addEventListener("click", () => sectionmomo.classList.remove("active"));   
     
       
   
