@@ -100,7 +100,7 @@ btnVerify.addEventListener('click', () => {
           <input type="password" id="password2" class="pass" placeholder="Nhập lại mật khẩu" name="password" required
             pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" />
         </div>
-                <span class='text-muted'> <form action="/Đăng nhập/login2.html">
+                <span class='text-muted'> <form action="../Đăng nhập/login2.html">
                 <button class="csw-btn-button" type="submit">Cập nhật mật khẩu</button>
             </form></span>
                 `;

@@ -38,7 +38,9 @@
                 <i class="fas fa-bars" id="menu-bars"></i>
                 <i class="fas fa-search" id="search-icon"></i>
                 <a href="HTML/cart.html" class="fas fa-shopping-cart"></a>
-                <a href="HTML/login.html" class="fas fa-user"></a>            
+                <i class="fas fa-user" id="search-user"></i>
+
+
             </div>    
         </header>
        <!--Thanh tiêu đề END-->
@@ -49,23 +51,52 @@
     <label for="search-box" class="fas fa-search"></label>
     <i class="fas fa-times" id="close"></i>
 </form>
+
+<form action="" id="login-form">
+    <div class="dropdown-menu  dropdown-menu-right ">
+       
+        <a href="Đăng nhập/detailaccount.html" class="dropdown-item">
+            <i class="fas fa-circle-info"></i>
+          <span>Thông tin tài khoản</span>
+        </a>
+        <a href="#!" class="dropdown-item">
+            <i class="fas fa-check-to-slot"></i>
+          <span>Kiểm tra đơn hàng</span>
+        </a>
+        <a href="Đăng nhập/OTPregister.html" class="dropdown-item">
+            <i class="fas fa-phone"></i>
+          <span>Đăng ký</span>
+        </a>
+        <a href="Đăng nhập/login2.html" class="dropdown-item">
+            <i class="fas fa-right-to-bracket"></i>
+          <span>Đăng nhập</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="Đăng nhập/detailaccount.html" class="dropdown-item">
+            <i class="fas fa-right-from-bracket"></i>
+          <span>Đăng xuất</span>
+        </a>
+      </div>
+</form>
+
+
    <!-- home section starts  -->
 
      <!-- HERO -->
      <div class="owl-carousel owl-theme hero-slider">
         <div class="slide1">
             <div class="container">
-                <h3 class="h3">ĂN CHAY SIÊU NGON</h3>
+                <h3 class="h3">BỮA TRƯA SIÊU ĐÃ CHỈ VỚI 49.000đ</h3>
                 <p>Món ăn thuần chay lành mạnh gồm các loại rau - bông cải xanh, nấm, rau bina và hạt diêm mạch</p>
-                <a href="#" class="btn">Đặt món ngay</a>
+                <a href="HTML/menu.html" class="btn">Đặt món ngay</a>
                 
             </div>
         </div>
         <div class="slide slide-2">
             <div class="container">
-                <h3 class="h3">THỰC ĐƠN ĂN KIÊNG</h3>
+                <h3 class="h3">ĐẶT MÓN ĂN <br>LỘC ĐẾN TAY</h3>
                 <p>Salad rau củ quả thuần chay tốt cho sức khỏe!</p>
-                <a href="" class="btn">Đặt món ngay</a>
+                <a href="HTML/menu.html" class="btn">Đặt món ngay</a>
                 
             </div>                            
         </div>
@@ -111,30 +142,40 @@
             <p>Chúng tôi cung cấp một loạt các món ăn  ngon nhất cho thực khách của chúng tôi.<br>Dưới đây là một số món ăn chính và nước uống phổ biến của chúng tôi.</p>
         </div>
         <div class="three-col-grid">
-            <div class="menu hover-effect1 ">
+            <a href="HTML/menu.html"><div class="menu hover-effect1 ">
                 <h3 class="h4">High-Protein</h3>
                 <p>Trọn vị đậm đà, tà tà ăn ngon...</p>
-            </div>
-            <div class="menu hover-effect2 ">
-                <h3 class="h4">Healthy</h3>
-                <p>Món ăn thanh, gắp nhanh đũa</p>
-            </div>
-            <div class="menu hover-effect3 ">
+            </div></a>
+          
+            <a  href="HTML/menu.html">
+                <div class="menu hover-effect2 ">
+                    <h3 class="h4">Healthy</h3>
+                    <p>Món ăn thanh, gắp nhanh đũa</p>
+                </div>
+            </a>
+           <a href="HTML/menu.html"> <div class="menu hover-effect3 ">
                 <h3 class="h4">Salad</h3>
                 <p>Càng ngày thêm đẹp</p>
             </div>
-            <div class="menu hover-effect4 ">
-                <h3 class="h4">Hot Pot</h3>
-                <p>Canh thanh, lẫu nóng, bụng vui, ấm lòng</p>
-            </div>
+            </a>
+            <a  href="HTML/menu.html">
+                <div class="menu hover-effect4 ">
+                    <h3 class="h4">Hot Pot</h3>
+                    <p>Canh thanh, lẫu nóng, bụng vui, ấm lòng</p>
+                </div>
+            </a>
+            <a href="HTML/menu.html" >
             <div class="menu hover-effect5 ">
                                <h3 class="h4">Super Quick</h3>
                 <p>Không phải chờ, vậy gọi này món này đi...</p>
             </div>
+            </a>
+            <a href="HTML/menu.html">
             <div class="menu hover-effect6 ">
                 <h3 class="h4">Drinks</h3>
                 <p>Trọn vẹn bữa ăn</p>
             </div>
+        </a>
         </div>
     </div>
 </section>
@@ -352,7 +393,7 @@
     
 
   <!--FOOTER-->
-  <p class="" w3-include-html="HTML/footer.html"></p> 
+  <p class="" w3-include-html="footer.html"></p> 
     
   <script>
       w3.includeHTML();         
