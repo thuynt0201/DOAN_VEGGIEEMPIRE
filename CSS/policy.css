@@ -324,7 +324,7 @@ header .icons #menu-bars{
     margin-top: 10pt;
     width:auto;
     height: 450px;
-    background-image: url(/ImagePolicy/bgPolicy2.jpg);
+    background-image: url(../ImagePolicy/bgPolicy2.jpg);
     background-size: cover;
 }
 
