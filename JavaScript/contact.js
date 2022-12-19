@@ -9,6 +9,7 @@ menu.onclick = () =>{
 let section = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header .navbar a');
 
+
 document.querySelector('#search-icon').onclick = () =>{
   document.querySelector('#search-form').classList.toggle('active');
 }
@@ -16,3 +17,13 @@ document.querySelector('#search-icon').onclick = () =>{
 document.querySelector('#close').onclick = () =>{
   document.querySelector('#search-form').classList.remove('active');
 }
+
+
+document.querySelector('#search-user').onclick = () =>{
+  document.querySelector('#login-form').classList.toggle('active');
+}
+
+document.querySelector('#close').onclick = () =>{
+  document.querySelector('#login-form').classList.remove('active');
+}
+

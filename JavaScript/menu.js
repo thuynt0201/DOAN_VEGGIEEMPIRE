@@ -406,9 +406,9 @@ function totalAmount(){
         sum+= item.price;
  
     })
-    document.getElementById('total-item').innerText= 'Total Item : ' + cartData.length;
-    document.getElementById('total-price').innerText= 'Total Price :  ' + sum + ' ₫';
-    document.getElementById('m-total-amount').innerText= 'Total Price : ₫ ' + sum;
+    document.getElementById('total-item').innerText= 'Tổng số lượng : ' + cartData.length;
+    document.getElementById('total-price').innerText= 'Tổng giỏ hàng:  ' + sum + ' ₫';
+    document.getElementById('m-total-amount').innerText= 'Tổng giỏ hàng : ₫ ' + sum;
 }
  
 document.getElementById('cart-plus').addEventListener('click',cartToggle);
@@ -473,16 +473,25 @@ function addEvents(){
    showBtn.addEventListener("click", () => section.classList.add("active"));     
    
 
-//Mở hợp thoại khi bấm vào thanh toán bằng momo   
-   const sectionmomo = document.querySelector(".modalpayment"),    
-     sectionoder = document.querySelector(".modal"),   
-     showBtnmomo = document.querySelector("#paymentmomo"),
-     closeBtnmomo = document.querySelector(".close-popup");
-     openPopuporder = document.querySelector(".open-order");
-   showBtnmomo.addEventListener("click", () => sectionmomo.classList.add("active")); 
-  closeBtnmomo.addEventListener("click", () => sectionmomo.classList.remove("active"));   
-    
-      
+//Mở hợp thoại khi bấm vào thanh toán bằng momo
+   
+const sectionmomo = document.querySelector(".modalpayment"), 
+showBtnmomo = document.querySelector("#paymentmomo"),
+closeBtnmomo = document.querySelector(".close-popup"); 
+closemomo = document.querySelector(".close");          
+showBtnmomo.addEventListener("click", () => sectionmomo.classList.add("active")); 
+closeBtnmomo.addEventListener("click", () => sectionmomo.classList.remove("active"));   
+closemomo.addEventListener("click", () => sectionmomo.classList.remove("active"));   
+
+    //Mở hộp thoại khi chọn địa chỉ giao hàng
+    const sectionaddress = document.querySelector(".modaladdress"), 
+    showBtnAddress = document.querySelector("#chooseaddress"),
+    closeBtnAddresss = document.querySelector(".close-address"); 
+    closeAddress = document.querySelector(".close-address-popup");          
+    showBtnAddress.addEventListener("click", () => sectionaddress.classList.add("active")); 
+    closeBtnAddresss.addEventListener("click", () => sectionaddress.classList.remove("active"));   
+    closeAddress.addEventListener("click", () => sectionaddress.classList.remove("active"));  
+
   
 }
  
